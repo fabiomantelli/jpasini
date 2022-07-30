@@ -1,11 +1,47 @@
 import styled from "styled-components";
 
 export const Container = styled.div`
-    
     height: 100vh;
     width: 25%;
     background: black;
 `
+
+export const TextContainer = styled.div`
+    padding: calc(20vh + 35px) 0 0 20%;
+
+    #right-line {
+        position: absolute;
+        height: 1px;
+        right: 0px;
+        border:1px solid rgba(33, 54, 29, 0.7);
+        animation: right_line_anim 1s linear forwards;
+       
+    }
+
+    @keyframes right_line_anim {
+        0%{
+            width: 0%;
+        }
+        100%{
+            width: 22%;
+        }
+    }
+
+    p {
+     display: flex;
+     justify-content: flex-end;
+     align-items: center;
+     font-family: 'Futura LT';
+     font-style: normal;
+     font-weight: 800;
+     font-size: 11px;
+     line-height: 15px;
+
+     color: #21361D;
+     margin-right: 5%;
+    }
+
+    `
 
 export const GreenItem = styled.div`
     display: flex;
@@ -16,4 +52,8 @@ export const GreenItem = styled.div`
     color: #fff;
     justify-content: space-evenly;
     align-items: center;
+    font-size: 10px;
 `
+
+   
+   

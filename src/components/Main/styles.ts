@@ -8,7 +8,7 @@ export const Container = styled.div`
 `
 
 export const TextContainer = styled.div`
-    margin: 20vh 0 0 20%;
+    padding: 20vh 0 0 20%;
 
     h1 {
         font-size: 113px;
@@ -24,8 +24,7 @@ export const TextContainer = styled.div`
         position: absolute;
         height: 1px;
         left: 0px;
-        margin-top: 20px;
-        border:1px solid rgba(255, 255, 255, 0.2);
+        border:  1px solid rgba(255, 255, 255, 0.2);
         animation: left_line_anim 1s linear forwards;
        
     }
@@ -39,32 +38,12 @@ export const TextContainer = styled.div`
         }
     }
 
-    #right-line {
-        position: absolute;
-        height: 1px;
-        right: 0px;
-        margin-top: 20px;
-        border:1px solid rgba(33, 54, 29, 0.7);
-        animation: right_line_anim 1s linear forwards;
-       
-    }
-
-    @keyframes right_line_anim {
-        0%{
-            width: 0%;
-        }
-        100%{
-            width: 22%;
-        }
-    }
-
     #circle {
         display: inline-block;
         position: absolute;
         height: 200px;
         width: 200px;
-        /* left: 5%; */
-        top: 200px;
+        top: 25vh;
         border-radius: 50%;
         border:1px solid rgba(255, 255, 255, 0.2);   
         animation: circle_anim 1s linear forwards;
@@ -80,4 +59,112 @@ export const TextContainer = styled.div`
     }
 
 
+`
+
+export const GreenItem = styled.div`
+ position: absolute;
+ display: flex;
+ flex-direction: row;
+ align-items: center;
+ bottom: 0;
+  width: 40%;
+  height: 100px;
+  background: #21361D;
+  color: #fff;
+  padding-left: 14%;
+  margin: 0 0 10px 10px;
+
+  h1 {
+    font-style: normal;
+    font-weight: 400;
+    font-size: 10px;
+    line-height: 14px;
+    color: #82C077;
+  }
+
+  h2 {
+    font-family: 'Avanti';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 26px;
+    line-height: 28px;
+    color: #FFFFFF;
+  }
+
+  #arrow-right {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    box-shadow: inset 0 0 0 2px;
+    width: 50px;
+    height: 6px;
+    margin: 10px;
+  }
+
+  #arrow-right::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    transform: rotate(45deg);
+    right: 0;
+    bottom: -2px;
+  }
+
+  #arrow-left {
+    box-sizing: border-box;
+    position: relative;
+    display: block;
+    transform: scale(var(--ggs,1));
+    border-top: 2px solid transparent;
+    border-bottom: 2px solid transparent;
+    box-shadow: inset 0 0 0 2px;
+    width: 50px;
+    height: 6px;
+    margin: 10px;
+  }
+
+  #arrow-left::after {
+    content: "";
+    display: block;
+    box-sizing: border-box;
+    position: absolute;
+    width: 6px;
+    height: 6px;
+    border-top: 1px solid;
+    border-right: 1px solid;
+    transform: rotate(-135deg);
+    left: 0;
+    bottom: -2px;
+  }
+
+  #arrow-flex {
+    display: flex;
+    margin: 15px 0 0 20px;
+  }
+`
+
+export const MenuBottom = styled.div`
+ position: absolute;
+ display: flex;
+ bottom: 0;
+ right: 20px;
+ width: 50%;
+ height: 30px;
+ margin: 0 0 25px 0;
+
+ ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  list-style: none;
+ }
 `

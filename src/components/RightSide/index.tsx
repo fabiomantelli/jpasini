@@ -1,5 +1,5 @@
 import { Sling } from 'hamburger-react'
-import { Container, GreenItem } from "./styles";
+import { Container, GreenItem, TextContainer } from "./styles";
 
 
 const RightSide: React.FC = () => {
@@ -9,6 +9,10 @@ const RightSide: React.FC = () => {
                 ARQUITETURA & ENGENHARIA CIVIL
                 <Sling />
             </GreenItem>
+            <TextContainer>
+                <p>VEJA TODOS OS PROJETOS</p>
+                <hr id="right-line"></hr>
+            </TextContainer>
         </Container>
     )
 }
