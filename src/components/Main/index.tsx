@@ -1,4 +1,4 @@
-import { Container, GreenItem, MenuBottom, TextContainer } from './styles'
+import { Container, GreenItem, TextContainer } from './styles'
 
 const Main: React.FC = () => {
     return (
@@ -26,16 +26,6 @@ const Main: React.FC = () => {
                     <div id="arrow-right" />
                 </div>
             </GreenItem>
-
-            <MenuBottom>
-                <ul>
-                    <li>.Instagram</li>
-                    <li>.WhastApp</li>
-                    <li>.Facebook</li>
-                    <li>PT</li>
-                </ul>
-            </MenuBottom>
-
         </Container>
     );
 }

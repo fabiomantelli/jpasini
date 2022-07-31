@@ -15,7 +15,7 @@ export default createGlobalStyle`
     body {
         background: #f5f5f5;
         font-size: 14px;
-        color: #fff;
+        color: black;
         font-family: 'Futura-LT';
     }
 

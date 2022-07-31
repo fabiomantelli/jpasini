@@ -4,20 +4,36 @@ export const Container = styled.div`
     background-image: url('./background.webp');
     background-size: cover;
     height: 100vh;
-    width: 75%;
+    width: 80%;
 `
 
 export const TextContainer = styled.div`
     padding: 20vh 0 0 20%;
 
     h1 {
-        font-size: 113px;
+        font-size: 113px; 
+        animation: fadeInUp 1s;
+
+        @keyframes fadeInUp {
+            from {
+                transform: translate3d(0,20vh,0);
+                opacity: 0;
+            }
+
+            to {
+                transform: translate3d(0,0,0);
+                opacity: 1;
+            }
+        }
     }
+
+    
 
     p {
         margin-top: 50px;
         width: 50%;
-        line-height: 28px
+        line-height: 28px;
+        
     }
 
     #left-line {
@@ -34,7 +50,7 @@ export const TextContainer = styled.div`
             width: 0%;
         }
         100%{
-            width: 78%;
+            width: 80%;
         }
     }
 
@@ -149,22 +165,4 @@ export const GreenItem = styled.div`
     display: flex;
     margin: 15px 0 0 20px;
   }
-`
-
-export const MenuBottom = styled.div`
- position: absolute;
- display: flex;
- bottom: 0;
- right: 20px;
- width: 50%;
- height: 30px;
- margin: 0 0 25px 0;
-
- ul {
-  display: flex;
-  width: 100%;
-  height: 100%;
-  justify-content: space-around;
-  list-style: none;
- }
 `

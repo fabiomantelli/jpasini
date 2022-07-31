@@ -2,7 +2,7 @@ import styled from "styled-components";
 
 export const Container = styled.div`
     height: 100vh;
-    width: 25%;
+    width: 20%;
     background: black;
 `
 
@@ -23,7 +23,7 @@ export const TextContainer = styled.div`
             width: 0%;
         }
         100%{
-            width: 22%;
+            width: 20%;
         }
     }
 
@@ -55,5 +55,31 @@ export const GreenItem = styled.div`
     font-size: 10px;
 `
 
+export const MenuBottom = styled.div`
+ position: absolute;
+ display: flex;
+ bottom: 0;
+ width: 20%;
+ height: 30px;
+ margin: 0 0 25px 0;
+
+ ul {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  justify-content: space-around;
+  list-style: none;
+ }
+
+ a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+   color: #21361D;
+   transition: 0.3s;
+  }
+ }
+`
    
    

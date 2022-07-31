@@ -17,4 +17,15 @@ export const NavigationMenu = styled.ul`
     width: 100%;
     align-items: center;
     justify-content: space-evenly;
+
+    
+ a {
+  text-decoration: none;
+  color: inherit;
+
+  &:hover {
+   color: black;
+   transition: 0.3s;
+  }
+ }
 `
