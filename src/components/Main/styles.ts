@@ -85,7 +85,7 @@ export const GreenItem = styled.div`
  bottom: 0;
   width: 40%;
   height: 100px;
-  background: #21361D;
+  background: ${props => props.theme.colors.primary};
   color: #fff;
   padding-left: 14%;
   margin: 0 0 10px 10px;
@@ -95,7 +95,7 @@ export const GreenItem = styled.div`
     font-weight: 400;
     font-size: 10px;
     line-height: 14px;
-    color: #82C077;
+    color: ${props => props.theme.colors.text};
   }
 
   h2 {

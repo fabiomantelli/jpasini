@@ -1,9 +1,21 @@
 import Image from 'next/image'
 import Link from 'next/link';
+import { useContext } from 'react';
+import { ThemeContext } from 'styled-components';
+
 import whiteLogo from '../../../public/whiteLogo.svg'
+import Switch from 'react-switch'
+
 import { Container, NavigationMenu } from './styles'
 
-const Header: React.FC = () => {
+interface Props {
+    toggleTheme(): void;
+  }
+  
+
+const Header: React.FC<Props> = ({ toggleTheme }) => {
+    const { colors, title } = useContext(ThemeContext)
+
     return (
         <Container>
             <Link href="/"><Image src={whiteLogo} alt="JPasini"/></Link>
@@ -11,6 +23,17 @@ const Header: React.FC = () => {
                 <Link href="/"><a><li>.Projetos</li></a></Link>
                 <Link href="/"><a><li>.Vendas</li></a></Link>
                 <Link href="/"><a><li>.Futuro</li></a></Link>
+                <Switch 
+                    onChange={toggleTheme}
+                    checked={title === 'dark'}
+                    checkedIcon={false}
+                    uncheckedIcon={false}
+                    height={10}
+                    width={40}
+                    handleDiameter={20}
+                    offColor={colors.primaryLight}
+                    onColor={colors.primary}
+                />
             </NavigationMenu>
         </Container>
     );

@@ -3,7 +3,7 @@ import styled from "styled-components";
 export const Container = styled.div`
     height: 100vh;
     width: 20%;
-    background: black;
+    background: ${props => props.theme.colors.background};
 `
 
 export const TextContainer = styled.div`
@@ -47,7 +47,7 @@ export const GreenItem = styled.div`
     display: flex;
     width: 90%;
     height: 60px;
-    background: #21361D;
+    background: ${props => props.theme.colors.primary};
     margin: 10px auto;
     color: #fff;
     justify-content: space-evenly;

@@ -4,6 +4,7 @@ import {
     RiFacebookBoxLine, 
     RiWhatsappLine, 
     RiInstagramLine,
+    RiLinkedinLine,
 } from 'react-icons/ri'
 import { MenuBottom } from './styles';
 import { Container, GreenItem, TextContainer } from "./styles";
@@ -39,6 +40,12 @@ const RightSide: React.FC = () => {
                         passHref
                     >
                         <a target="_blank"><li>.<RiFacebookBoxLine size={20} /></li></a>
+                    </Link>
+                    <Link 
+                        href="https://www.linkedin.com/company/jpasini/"
+                        passHref
+                    >
+                        <a target="_blank"><li>.<RiLinkedinLine size={20}/></li></a>
                     </Link>
                     <li>PT</li>
                 </ul>

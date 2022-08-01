@@ -13,9 +13,9 @@ export default createGlobalStyle`
     }
 
     body {
-        background: #f5f5f5;
+        background: ${props => props.theme.colors.background};
         font-size: 14px;
-        color: black;
+        color: ${props => props.theme.colors.text};
         font-family: 'Futura-LT';
     }
 
