@@ -1,5 +1,6 @@
 import { Sling } from 'hamburger-react'
 import Link from 'next/link';
+import { useRouter } from 'next/router';
 import { 
     RiFacebookBoxLine, 
     RiWhatsappLine, 
@@ -11,6 +12,7 @@ import { Container, GreenItem, TextContainer } from "./styles";
 
 
 const RightSide: React.FC = () => {
+
     return (
         <Container>
             <GreenItem>
@@ -47,7 +49,15 @@ const RightSide: React.FC = () => {
                     >
                         <a target="_blank"><li>.<RiLinkedinLine size={20}/></li></a>
                     </Link>
-                    <li>PT</li>
+                    <li>
+                        <select
+                            // onChange={changeLanguage}
+                            // defaultValue={locale}
+                        >
+                            {/* <option value="en-US">EN</option>
+                            <option value="pt-BR">PT</option> */}
+                        </select>
+                    </li>
                 </ul>
             </MenuBottom>
         </Container>

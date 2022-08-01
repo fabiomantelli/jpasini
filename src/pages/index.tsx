@@ -14,7 +14,7 @@ import usePersistedState from '../utils/usePersistedState'
 
 const Home: NextPage = () => {
   const [theme, setTheme] = usePersistedState<DefaultTheme>('theme', light);
-
+  
   const toggleTheme = () => {
     setTheme(theme.title === 'light' ? dark : light);
   }
