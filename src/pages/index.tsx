@@ -2,7 +2,7 @@ import type { NextPage } from 'next'
 import { ThemeProvider, DefaultTheme } from 'styled-components'
 
 import Header from '../components/Header'
-import Main from '../components/Main'
+import MainAntonioEmilio from '../components/MainAntonioEmilio'
 import RightSide from '../components/RightSide'
 
 import { FlexContainer } from '../styles/home.styles'
@@ -24,7 +24,7 @@ const Home: NextPage = () => {
         <GlobalStyles />
         <Header toggleTheme={toggleTheme} />
         <FlexContainer>
-          <Main />
+          <MainAntonioEmilio />
           <RightSide />
         </FlexContainer>
       </ThemeProvider>

@@ -3,7 +3,7 @@ import Link from 'next/link';
 import { useContext } from 'react';
 import { ThemeContext } from 'styled-components';
 
-import whiteLogo from '../../../public/whiteLogo.svg'
+import WhiteLogo from '../../../public/WhiteLogo.svg'
 import Switch from 'react-switch'
 
 import { useRouter } from 'next/router'
@@ -21,11 +21,11 @@ const Header: React.FC<Props> = ({ toggleTheme }) => {
 
     return (
         <Container>
-            <Link href="/"><Image src={whiteLogo} alt="JPasini"/></Link>
+            <Link href="/"><Image src={WhiteLogo} alt="JPasini"/></Link>
             <NavigationMenu>
-                <Link href="/"><a><li>.</li></a></Link>
-                <Link href="/"><a><li>.</li></a></Link>
-                <Link href="/"><a><li>.</li></a></Link>
+                <Link href="/"><a><li>.Projects</li></a></Link>
+                <Link href="/"><a><li>.Sales</li></a></Link>
+                <Link href="/"><a><li>.Future</li></a></Link>
                 <Switch 
                     onChange={toggleTheme}
                     checked={title === 'dark'}

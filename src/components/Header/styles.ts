@@ -11,7 +11,7 @@ export const Container = styled.div`
 
 export const NavigationMenu = styled.ul`
     list-style: none;
-    color: #fff;
+    color: white;
     display: flex;
     height: 100%;
     width: 100%;
