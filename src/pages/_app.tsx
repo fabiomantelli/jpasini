@@ -3,10 +3,12 @@ import Head from 'next/head'
 
 import { ChakraProvider } from '@chakra-ui/react'
 
+import theme from '../styles/theme'
+
 function MyApp({ Component, pageProps }: AppProps) {
 
   return (
-    <ChakraProvider>
+    <ChakraProvider theme={theme}>
       <Head>
         <link rel="shortcut icon" href="/favicon.ico" />
       </Head>

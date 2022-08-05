@@ -7,9 +7,8 @@ import MainSection from '../components/MainSection';
 const AntonioEmilio: NextPage = () => {
         return (
             <>
-            <GlobalStyles />
-                <Header />
-                <MainSection />
+                <Header logo='green' />
+                {/* <MainSection /> */}
             </>
         )
 }

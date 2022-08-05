@@ -6,7 +6,7 @@ import RightSide from '../components/RightSide'
 const Home: NextPage = () => {
   return (
         <>
-          <Header />
+          <Header logo='white' />
           {/* <MainAntonioEmilio /> */}
           {/* <RightSide /> */}
         </>
