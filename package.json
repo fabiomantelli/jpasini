@@ -9,9 +9,13 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@chakra-ui/icons": "^2.0.6",
     "@chakra-ui/react": "^2.2.4",
     "@emotion/react": "^11",
     "@emotion/styled": "^11",
+    "@fontsource/hahmlet": "^4.5.11",
+    "@fontsource/lato": "^4.5.8",
+    "@fontsource/montserrat": "^4.5.11",
     "framer-motion": "^6",
     "hamburger-react": "^2.5.0",
     "next": "12.2.3",

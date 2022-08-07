@@ -16,11 +16,12 @@ const theme = extendTheme({
       }
   },
   fonts: {
-    body: "system-ui, sans-serif",
-    heading: "Georgia, serif",
-    mono: "Menlo, monospace",
+    body: "hahmlet, serif",
+    heading: "hahmlet, serif",
+    mono: "Lato, sans-serif",
   },
   fontSizes: {
+    as: "0.50rem",
     xs: "0.75rem",
     sm: "0.875rem",
     md: "1rem",
