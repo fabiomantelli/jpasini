@@ -26,7 +26,7 @@ function Header({ logo }: LogoProps) {
     >
       <Flex alignItems="center" textDecor='none'>
         <Link href="/">
-          <img src={logo == 'white' ? '../whitelogo.svg' : '../logo.svg'} alt="Logo" />
+          <img src={logo == 'white' ? '/whitelogo.svg' : '/logo.svg'} alt="Logo" />
         </Link>
         <Spacer />
         {
