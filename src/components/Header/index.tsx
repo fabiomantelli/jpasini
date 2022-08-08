@@ -8,7 +8,7 @@ import {
   Spacer,
   useMediaQuery,
   Text
-} from "@chakra-ui/react";
+} from '@chakra-ui/react'
 
 import Logo from "../../../public/Logo.svg";
 import WhiteLogo from "../../../public/WhiteLogo.svg";
