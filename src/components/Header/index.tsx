@@ -31,7 +31,7 @@ function Header({ logo }: LogoProps) {
     >
       <Flex alignItems="center" textDecor='none'>
         <Link href="/">
-          <Image src={logo == 'white' ? WhiteLogo : Logo} alt="Logo" width='100%' height='100%' />
+          {logo == 'white' ? <WhiteLogo /> : <Logo />}
         </Link>
         <Spacer />
         {
