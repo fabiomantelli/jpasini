@@ -11,7 +11,7 @@ import {
 } from '@chakra-ui/react'
 
 import Logo from "../../../public/Logo.svg";
-import WhiteLogo from "../../../public/WhiteLogo.svg";
+import WhiteLogo from '../../../public/WhiteLogo.svg'
 import { Slant as Hamburger } from "hamburger-react";
 
 interface LogoProps {
