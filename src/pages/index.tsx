@@ -1,7 +1,6 @@
 import { Box, Flex } from '@chakra-ui/react'
 import type { NextPage } from 'next'
 import Header from '../components/Header'
-import MainAntonioEmilio from '../components/MainAntonioEmilio'
 import MainSection from '../components/MainSection'
 import RightSide from '../components/RightSide'
 
