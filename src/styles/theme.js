@@ -3,17 +3,17 @@ import { extendTheme } from '@chakra-ui/react'
 // example theme
 const theme = extendTheme({
   colors: {
-      transparent: 'transparent',
-      black: '#000',
-      white: '#fff',
-      gray: {
-        50: '#f7fafc',
-        // ...
-        900: '#D9D9D9',
-      },
-      green: {
-        500: '#21361D'
-      }
+    transparent: 'transparent',
+    black: '#000',
+    white: '#fff',
+    gray: {
+      50: '#f7fafc',
+      // ...
+      900: '#D9D9D9',
+    },
+    green: {
+      500: '#21361D'
+    }
   },
   fonts: {
     body: "hahmlet, serif",
@@ -72,6 +72,13 @@ const theme = extendTheme({
     wider: "0.05em",
     widest: "0.1em",
   },
+  breakpoints: {
+    sm: '320px',
+    md: '768px',
+    lg: '960px',
+    xl: '1200px',
+    // '2xl': '1536px',
+  }
 });
 
 export default theme;

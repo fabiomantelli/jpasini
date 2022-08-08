@@ -1,14 +1,22 @@
-import NextLink from 'next/link'
-import { Box, Flex, Text, List, ListItem, Link, keyframes, Divider } from '@chakra-ui/react';
-import Hamburger, { Sling } from 'hamburger-react'
+import { 
+  Box, 
+  Flex, 
+  Text, 
+  List, 
+  ListItem, 
+  Link, 
+  keyframes, 
+  Divider, 
+  useMediaQuery 
+} from '@chakra-ui/react';
+
+import { Slant as Hamburger } from 'hamburger-react'
 import {
   RiFacebookBoxLine,
   RiWhatsappLine,
   RiInstagramLine,
   RiLinkedinLine,
 } from 'react-icons/ri'
-import { MenuBottom } from './styles';
-import { Container, GreenItem, TextContainer } from "./styles";
 
 interface logoProps {
   logo: string
@@ -20,16 +28,20 @@ const motionToLeft = keyframes`
 `
 
 function RightSide({ logo }: logoProps) {
+  const [isLargerThan1024] = useMediaQuery('(min-width: 1024px)');
+  const [isLargerThan768] = useMediaQuery('(min-width: 768px)');
   const motionToLeftAnimation = `${motionToLeft} 1s linear backwards`;
+
   return (
     <Box
       width='20vw'
       height='100vh'
       background={logo == 'white' ? 'black' : 'green.500'}
+      display={isLargerThan768 ? 'block' : 'none'}
     >
       <Divider 
         position='fixed'
-        top='250px'
+        top={{ xl: '300px', lg: '265px', md: '230px'}}
         width='16.7vw'
         right='0'
         height="0px"
@@ -38,15 +50,24 @@ function RightSide({ logo }: logoProps) {
         animation={motionToLeftAnimation}
       />
       <Flex
-        width='90%'
         height="60px"
         margin="10px"
+        padding="5px"
         alignItems='center'
         background={logo == 'white' ? 'green.500' : 'black'}
-        justifyContent='center'
+        justifyContent='space-evenly'
       >
-        <Text color='white' fontSize='as'>ARQUITETURA & ENGENHARIA CIVIL</Text>
-        <Hamburger color='white' size={25} />
+        <Text 
+          color='white' 
+          fontSize='as'
+        >
+          ARQUITETURA & <br />
+          ENGENHARIA CIVIL
+        </Text>
+        <Hamburger 
+          color='white' 
+          size={isLargerThan1024 ? 40 : 30} 
+        />
       </Flex>
       <Flex 
         alignItems='flex-end'
@@ -56,7 +77,8 @@ function RightSide({ logo }: logoProps) {
       >
        <List 
         display='flex'
-        gap={8}
+        flexDir={isLargerThan1024 ? 'row' : 'column'}
+        gap={5}
         marginBottom="20px"
         color="white"
        >
