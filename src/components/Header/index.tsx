@@ -13,9 +13,6 @@ import {
 
 import { Slant as Hamburger } from "hamburger-react";
 
-import Logo from '/logo.svg'
-import WhiteLogo from '/whitelogo.svg'
-
 interface LogoProps {
   logo: string
 }
@@ -31,7 +28,7 @@ function Header({ logo }: LogoProps) {
     >
       <Flex alignItems="center" textDecor='none'>
         <Link href="/">
-          <img src={logo == 'white' ? '/whitelogo.svg' : '/logo.svg'} />
+          <Image src={logo == 'white' ? '/whitelogo.svg' : '/logo.svg'} />
         </Link>
         <Spacer />
         {
