@@ -10,7 +10,8 @@ import {
   Text
 } from '@chakra-ui/react'
 
-import Logo from "/public/logo.svg";
+import Logo from "/Logo.svg";
+import WhiteLogo from '/whitelogo.svg'
 import { Slant as Hamburger } from "hamburger-react";
 
 interface LogoProps {
@@ -28,7 +29,7 @@ function Header({ logo }: LogoProps) {
     >
       <Flex alignItems="center" textDecor='none'>
         <Link href="/">
-          <Image src={logo == 'white' ? '/whitelogo.svg' : Logo} width="100%" height="100%" alt="Logo" />
+          <Image src={logo == 'white' ? WhiteLogo : Logo} alt="Logo" />
         </Link>
         <Spacer />
         {
