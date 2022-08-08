@@ -8,7 +8,7 @@ const Home: NextPage = () => {
   return (
     <Flex>
       <Box
-        backgroundImage='./background.webp'
+        backgroundImage='/background.webp'
         backgroundSize='cover'
         height='100vh'
         width='100vw'
