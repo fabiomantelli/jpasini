@@ -1,5 +1,3 @@
-import Image from 'next/image'
-
 import {
   Box,
   Link,
@@ -30,7 +28,7 @@ function Header({ logo }: LogoProps) {
       <Flex alignItems="center" textDecor='none'>
         <Link href="/">
           {/* <Image src={logo == 'white' ? '/whitelogo.svg' : '/white.svg'} width='100%' height='100%' /> */}
-          <Image src="/whitelogo.svg" width="64" height="64" />
+          <img src="../white-logo.svg" width='100%' height='100%' />
         </Link>
         <Spacer />
         {
