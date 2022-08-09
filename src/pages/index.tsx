@@ -11,9 +11,8 @@ const Home: NextPage = () => {
       <Box
         backgroundImage="/background.webp"
         backgroundSize="cover"
-        height='100vh'
+        height="calc(100vh - calc(100vh - 100%))"
         width="100%"
-        border="2px solid yellow"
       >
         <Header logo="white" />
         <MainSection logo="white" />
