@@ -5,19 +5,24 @@ import MainSection from "../components/MainSection";
 import RightSide from "../components/RightSide";
 import { Box, Flex } from "@chakra-ui/react";
 
+import { ViewportHeightBox } from "next-real-viewport";
+
 const Home: NextPage = () => {
   return (
-    <Flex height="calc(var(--vh) * 100)">
-      <Box
-        backgroundImage="/background.webp"
-        backgroundSize="cover"
-        width="100%"
-      >
-        <Header logo="white" />
-        <MainSection logo="white" />
-      </Box>
-      <RightSide logo="white" />
-    </Flex>
+    <ViewportHeightBox>
+      <Flex>
+        <Box
+          backgroundImage="/background.webp"
+          backgroundSize="cover"
+          width="100%"
+          height="vh"
+        >
+          <Header logo="white" />
+          <MainSection logo="white" />
+        </Box>
+        <RightSide logo="white" />
+      </Flex>
+    </ViewportHeightBox>
   );
 };
 
