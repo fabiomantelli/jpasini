@@ -23,9 +23,10 @@ function Header({ logo }: LogoProps) {
   return (
     <Box
       bg={logo == 'white' ? '' : 'gray.900'}
-      padding='10px 10px 10px 5vw'
+      margin='10px 10px 10px 5vw'
+      // border="2px solid red"
     >
-      <Flex alignItems="center" textDecor='none'>
+      <Flex alignItems="center" textDecor='none' height="60px">
         <Link href="/">
           {/* <Image src={logo == 'white' ? '../whitelogo.svg' : '../logo.svg'} width='100%' height='100%' /> */}
           <img src={logo == 'white' ? '../white-logo.svg' : '../logo.svg'} width='100%' height='100%' />

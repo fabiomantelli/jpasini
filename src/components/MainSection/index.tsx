@@ -49,7 +49,7 @@ function MainSection({ logo }: logoProps) {
   return (
     <>
       <Box
-        height="calc(100vh - 180px)"
+        height="calc(100vh - 185px)"
         maxW="1440px"
         width="100%"
         display="flex"
@@ -70,7 +70,7 @@ function MainSection({ logo }: logoProps) {
           height={isLargerThan768 ? "auto" : "100%"}
           justifyContent={{ md: "initial", base: "center" }}
           padding="50px 5vw"
-          // width="100%"
+          width="100%"
           position="relative"
         >
           <Flex
@@ -78,7 +78,6 @@ function MainSection({ logo }: logoProps) {
             display={isLargerThan768 ? "block" : "none"}
             width="213px"
             height="213px"
-            // top='120px'
             top={{ xl: "120px", lg: "95px", md: "60px" }}
             border="1px solid rgba(179,179,179,0.3)"
             borderRadius="50%"
