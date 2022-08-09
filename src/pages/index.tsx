@@ -7,11 +7,10 @@ import { Box, Flex } from "@chakra-ui/react";
 
 const Home: NextPage = () => {
   return (
-    <Flex>
+    <Flex minHeight="100vh">
       <Box
         backgroundImage="/background.webp"
         backgroundSize="cover"
-        height="calc(100vh - calc(100vh - 100%))"
         width="100%"
       >
         <Header logo="white" />
