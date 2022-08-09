@@ -2295,11 +2295,6 @@ next-react-svg@^1.1.3:
   dependencies:
     svg-react-loader "0.4.6"
 
-next-real-viewport@^0.7.1:
-  version "0.7.1"
-  resolved "https://registry.yarnpkg.com/next-real-viewport/-/next-real-viewport-0.7.1.tgz#2369226a221b671b7bb572a76a753fcb0a84d60d"
-  integrity sha512-2SIuOORhqrV00MpkjPQk/z3h/eRCHnYlJV6srn+aaPEM3k6e+hpc8jkmJWsmgP2rncrcOrxLzL/FearfAgAMfQ==
-
 next@12.2.3:
   version "12.2.3"
   resolved "https://registry.yarnpkg.com/next/-/next-12.2.3.tgz#c29d235ce480e589894dfab3120dade25d015a22"
