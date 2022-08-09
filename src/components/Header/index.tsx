@@ -13,8 +13,8 @@ import {
 
 import { Slant as Hamburger } from "hamburger-react";
 
-import Logo from '/public/logo.svg'
-import WhiteLogo from '/public/whitelogo.svg'
+import Logo from '/logo.svg'
+import WhiteLogo from '/whitelogo.svg'
 
 interface LogoProps {
   logo: string
