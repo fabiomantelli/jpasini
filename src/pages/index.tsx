@@ -10,8 +10,8 @@ const Home: NextPage = () => {
       <Box
         backgroundImage='/background.webp'
         backgroundSize='cover'
-        height='100vh'
-        width='100vw'
+        // height='100vh'
+        // width='100vw'
       >
         <Header logo='white' />
         <MainSection logo='white' />

@@ -55,7 +55,6 @@ function MainSection({ logo }: logoProps) {
         display="flex"
         marginRight="auto"
         marginLeft="auto"
-        border="2px solid red"
       >
         <Divider
           position="fixed"
@@ -71,7 +70,7 @@ function MainSection({ logo }: logoProps) {
           height={isLargerThan768 ? "auto" : "100%"}
           justifyContent={{ md: "initial", base: "center" }}
           padding="50px 5vw"
-          width="100%"
+          // width="100%"
           position="relative"
         >
           <Flex
