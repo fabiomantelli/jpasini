@@ -40,7 +40,7 @@ function MainSection({ logo }: logoProps) {
 
   return (
     <Box
-      height="calc(100vh - 180px)"
+      // height="calc(100vh - 180px)"
       maxW='1440px'
       width='100%'
       display='flex'
