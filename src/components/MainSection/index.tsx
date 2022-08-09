@@ -46,6 +46,7 @@ function MainSection({ logo }: logoProps) {
       display='flex'
       marginRight='auto'
       marginLeft='auto'
+      border="2px solid red"
     >
     <Divider
       position='fixed'
