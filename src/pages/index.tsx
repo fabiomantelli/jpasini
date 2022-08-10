@@ -12,7 +12,7 @@ const Home: NextPage = () => {
         backgroundImage="/background.webp"
         backgroundSize="cover"
         width="100%"
-        height="100%"
+        height="100svh"
       >
         <Header logo="white" />
         <MainSection logo="white" />
