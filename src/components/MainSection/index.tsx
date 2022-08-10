@@ -49,9 +49,8 @@ function MainSection({ logo }: logoProps) {
   return (
     <>
       <Box
-        height="calc(100vh - 185px)"
-        maxW="1440px"
-        width="100%"
+        // maxW="1440px"
+        width="80vw"
         display="flex"
         marginRight="auto"
         marginLeft="auto"
@@ -59,7 +58,6 @@ function MainSection({ logo }: logoProps) {
         <Divider
           position="fixed"
           display={isLargerThan768 ? "block" : "none"}
-          width="83.2vw"
           left="0"
           top={{ xl: "300px", lg: "265px", md: "230px" }}
           border="0px solid rgba(179,179,179,0.3)"
@@ -67,11 +65,12 @@ function MainSection({ logo }: logoProps) {
         />
 
         <Stack
-          height={isLargerThan768 ? "auto" : "100%"}
+          height={isLargerThan768 ? "auto" : "70vh"}
           justifyContent={{ md: "initial", base: "center" }}
           padding="50px 5vw"
           width="100%"
           position="relative"
+          // border="2px solid red"
         >
           <Flex
             position="absolute"
@@ -117,34 +116,7 @@ function MainSection({ logo }: logoProps) {
           </Text>
         </Stack>
       </Box>
-      <Flex
-        position="relative"
-        flexDir="row"
-        bottom="0"
-        left="0"
-        margin="10px 0 10px"
-        width={isLargerThan768 ? "600px" : "calc(95vw - 10px);"}
-        height="80px"
-        alignItems="center"
-        background={
-          isLargerThan768 ? (logo == "white" ? "green.500" : "black") : "none"
-        }
-        justifyContent="space-between"
-        marginLeft={isLargerThan768 ? "10px" : "5vw"}
-      >
-        <Box paddingLeft={isLargerThan768 ? "4vw" : "0"}>
-          <Text color="white" fontSize="xs">
-            PRÓXIMO
-          </Text>
-          <Text color="white" fontSize="3xl">
-            VIENA
-          </Text>
-        </Box>
-        <Box marginRight={isLargerThan768 ? "50px" : "none"}>
-          <ArrowLeftIcon color="white" marginRight="50px" />
-          <ArrowRightIcon color="white" />
-        </Box>
-      </Flex>
+      
     </>
   );
 }

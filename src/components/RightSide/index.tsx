@@ -34,10 +34,12 @@ function RightSide({ logo }: logoProps) {
 
   return (
     <Box
-      width='20vw'
-      // height='100vh'
+      width='280px'
+      height='100vh'
+      // border="2px solid red"
       background={logo == 'white' ? 'black' : 'green.500'}
       display={isLargerThan768 ? 'block' : 'none'}
+      
     >
       <Divider 
         position='fixed'
@@ -49,38 +51,21 @@ function RightSide({ logo }: logoProps) {
         border={0}
         animation={motionToLeftAnimation}
       />
-      <Flex
-        height="60px"
-        margin="10px"
-        padding="5px"
-        alignItems='center'
-        background={logo == 'white' ? 'green.500' : 'black'}
-        justifyContent='space-evenly'
-      >
-        <Text 
-          color='white' 
-          fontSize='as'
-        >
-          ARQUITETURA & <br />
-          ENGENHARIA CIVIL
-        </Text>
-        <Hamburger 
-          color='white' 
-          size={isLargerThan1024 ? 40 : 30} 
-        />
-      </Flex>
       <Flex 
         alignItems='flex-end'
         justifyContent='center'
         color='white'
-        height='calc(100vh - 80px); '
+        height="100vh"
       >
        <List 
         display='flex'
+        // position="absolute"
+        bottom={0}
         flexDir={isLargerThan1024 ? 'row' : 'column'}
+        alignItems="center"
         gap={5}
-        marginBottom="20px"
-        color="white"
+        paddingBottom={isLargerThan1024 ? '0' : "40px"}
+        height={isLargerThan1024 ? "80px" : 'auto'}
        >
           <ListItem _hover={{ color: 'green.900', transition: '0.3s'}}>
             <Link href='https://www.instagram.com/jpasiniarquiteturaeengenharia/' target='_blank'>

@@ -1,8 +1,25 @@
+import { Box, Flex } from "@chakra-ui/react"
 import { NextPage } from "next"
+import Header from "../components/Header"
 
-const AntonioEmilio: NextPage = () => {
+import Menu from '../components/Menu'
+
+
+interface LogoProps {
+    logo: string
+   }
+   
+
+function AntonioEmilio({ logo }:  LogoProps) {
     return (
-        <h1>Antonio Emilio</h1>
+        <Box
+            // maxW="100vw"
+            margin="0 auto"
+        >
+            <Header logo="green" />
+            <Menu logo={logo} />
+            <img src="../assets/antonioemilio/antonio-party-room-1.webp"/>
+        </Box>
     )
 }
 

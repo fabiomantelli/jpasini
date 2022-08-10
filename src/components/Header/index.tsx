@@ -6,11 +6,9 @@ import {
   Flex,
   Spacer,
   useMediaQuery,
-  Text
 } from '@chakra-ui/react'
 
-import { Slant as Hamburger } from "hamburger-react";
-
+import Menu from '../../components/Menu'
 
 interface LogoProps {
   logo: string
@@ -23,71 +21,55 @@ function Header({ logo }: LogoProps) {
   return (
     <Box
       bg={logo == 'white' ? '' : 'gray.900'}
-      margin='10px 10px 10px 5vw'
-      // border="2px solid red"
+      padding='10px 80px 10px 5vw'
+      // border="2px solid purple"
     >
-      <Flex alignItems="center" textDecor='none' height="60px">
+      <Flex 
+        alignItems="center" 
+        textDecor='none' 
+        height="60px" 
+        // border="2px solid green"
+        justifyContent="space-evenly"
+      >
         <Link href="/">
           <img src={logo == 'white' ? '../white-logo.svg' : '../logo.svg'} width='100%' height='100%' />
         </Link>
         <Spacer />
         {
-          isLargerThan768 && (
-            <>
+          isLargerThan1280 && (
               <List>
-                <Flex alignItems="center" gap="10vw" color='white'>
+                <Flex 
+                  color={logo == 'white' ? 'white' : 'black'}
+                  // border="2px solid red"
+                >
                   <Link
                     href="/projetos"
                     style={{ textDecoration: 'none' }}
-                    _hover={{ color: 'gray.900', transition: '0.3s' }}
+                    // _hover={{ color: 'gray.900', transition: '0.3s' }}
+                    _hover={logo == 'white'  ? { color: 'gray.900', transition: '0.3s' } : { color: 'green.500', transition: '0.3s'}}
+                    paddingRight="50px"
                   >
                     <ListItem>.Projetos</ListItem>
                   </Link>
                   <Link
                     href="/vendas"
                     style={{ textDecoration: 'none' }}
-                    _hover={{ color: 'gray.900', transition: '0.3s' }}
+                    _hover={logo == 'white'  ? { color: 'gray.900', transition: '0.3s' } : { color: 'green.500', transition: '0.3s'}}
+                    paddingRight="50px"
                   >
                     <ListItem>.Vendas</ListItem>
                   </Link>
                   <Link
                     href="/futuro"
                     style={{ textDecoration: 'none' }}
-                    _hover={{ color: 'gray.900', transition: '0.3s' }}
+                    _hover={logo == 'white'  ? { color: 'gray.900', transition: '0.3s' } : { color: 'green.500', transition: '0.3s'}}
                   >
                     <ListItem>.Futuro</ListItem>
                   </Link>
                 </Flex>
               </List>
-              <Spacer />
-            </>
           )
         }
-        {
-          isLargerThan768 ? (null) : (
-            <Flex
-              height="60px"
-              width='30vw'
-              padding="5px"
-              alignItems='center'
-              background={logo == 'white' ? 'green.500' : 'black'}
-              justifyContent='space-evenly'
-            >
-              <Text
-                color='white'
-                fontSize='as'
-              >
-                ARQUITETURA & <br />
-                ENGENHARIA CIVIL
-              </Text>
-              <Hamburger
-                color='white'
-                size={isLargerThan1280 ? 45 : 25}
-              />
-            </Flex>
-          )
-        }
-
       </Flex>
     </Box>
   );
