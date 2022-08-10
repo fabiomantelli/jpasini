@@ -15,7 +15,7 @@ interface logoProps {
 
 const motionLineToRight = keyframes`
   0% { width: 0%; }
-  100% { width: 83.2vw; }
+  100% { width: calc(100vw - 280px); }
 `;
 const motionCircleToRight = keyframes`
   0% { left: -20%; }
@@ -41,6 +41,7 @@ const moveTextDown = keyframes`
 
 function MainSection({ logo }: logoProps) {
   const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
+
   const motionLineToRightAnimation = `${motionLineToRight} 1s linear forwards`;
   const motionCircleToRightAnimation = `${motionCircleToRight} 1s linear forwards`;
   const moveTextUpAnimation = `${moveTextUp} 0.5s ease-in-out`;

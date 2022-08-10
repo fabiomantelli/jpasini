@@ -24,7 +24,7 @@ interface logoProps {
 
 const motionToLeft = keyframes`
   0% { width: 0%; }
-  100% { width: 16.7vw; }
+  100% { width: 280px; }
 `
 
 function RightSide({ logo }: logoProps) {
@@ -44,7 +44,7 @@ function RightSide({ logo }: logoProps) {
       <Divider 
         position='fixed'
         top={{ xl: '300px', lg: '265px', md: '230px'}}
-        width='16.7vw'
+        width='280px'
         right='0'
         height="0px"
         borderColor="#383838"
