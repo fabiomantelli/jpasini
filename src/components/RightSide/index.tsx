@@ -44,9 +44,8 @@ function RightSide({ logo }: logoProps) {
         width='280px'
         right='0'
         height="0px"
-        borderColor="#383838"
-        border={0}
         animation={motionToLeftAnimation}
+        borderColor="rgba(179,179,179,1)"
       />
       <Flex 
         alignItems='flex-end'

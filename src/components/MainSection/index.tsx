@@ -40,11 +40,11 @@ function MainSection({ logo }: logoProps) {
     <>
       <Box width="80vw" display="flex" marginRight="auto" marginLeft="auto">
         <Divider
-          position="fixed"
-          display={["none", "none", "none", "block"]}
+          position="absolute"
+          // display={["none", "none", "none", "none", "flex"]}
           left="0"
           top={{ xl: "300px", lg: "265px", md: "230px" }}
-          border="0px solid rgba(179,179,179,0.3)"
+          borderColor="rgba(179,179,179,1)"
           animation={motionLineToRightAnimation}
         />
 
@@ -57,7 +57,7 @@ function MainSection({ logo }: logoProps) {
         >
           <Flex
             position="absolute"
-            display={["none", "none", "none", "none", "block"]}
+            // display={["none", "none", "none", "none", "flex"]}
             width="213px"
             height="213px"
             top={{ xl: "120px", lg: "95px", md: "60px" }}
@@ -88,12 +88,16 @@ function MainSection({ logo }: logoProps) {
             animation={moveTextDownAnimation}
           >
             Projeto com 46 Unidades, todos os apartamentos de 2 quartos, sendo 1
-            suíte.&nbsp;
-            <Text display={["none", "none", "none", "inline"]}>
-              Possui sacada com churrasqueira a carvão com bancada de granito, 1
-              vaga de garagem, salão de festas, dois elevadores, guarita,
-              segurança e serviço de TV.
-            </Text>
+            suíte. &nbsp;
+          </Text>
+          <Text
+            display={["none", "none", "none", "none", "flex"]}
+            color='white'
+            animation={moveTextDownAnimation}
+          >
+            Possui sacada com churrasqueira a carvão com bancada de granito, 1
+            vaga de garagem, salão de festas, dois elevadores, guarita,
+            segurança e serviço de TV.
           </Text>
         </Stack>
       </Box>
