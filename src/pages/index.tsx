@@ -9,14 +9,16 @@ import Menu from '../components/Menu'
 import Next from "../components/Next";
 
 const Home: NextPage = () => {
-  const [isLargerThan768] = useMediaQuery('(min-width: 768px)');
+  // const [isLargerThan768] = useMediaQuery('(min-width: 768px)');
   return (
     <Flex>
       <Box
         backgroundImage="/background.webp"
         backgroundSize="cover"
         // width="85vw"
-        width={isLargerThan768 ? 'calc(100vw - 280px)' : '100vw'}
+        width={['100vw', '100vw', '100vw', '100vw', 'calc(100vw - 280px)']}
+        // width={isLargerThan768 ? 'calc(100vw - 280px)' : '100vw'}
+        // width={isLargerThan768 ? 'calc(100vw - 280px)' : '100vw'}
         height="100vh"
       >
         <Header logo="white" />

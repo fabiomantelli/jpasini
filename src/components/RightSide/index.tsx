@@ -38,7 +38,8 @@ function RightSide({ logo }: logoProps) {
       height='100vh'
       // border="2px solid red"
       background={logo == 'white' ? 'black' : 'green.500'}
-      display={isLargerThan768 ? 'block' : 'none'}
+      display={['none', 'none', 'none', 'block']}
+      // display={isLargerThan768 ? 'block' : 'none'}
       
     >
       <Divider 
@@ -61,7 +62,8 @@ function RightSide({ logo }: logoProps) {
         display='flex'
         // position="absolute"
         bottom={0}
-        flexDir={isLargerThan1024 ? 'row' : 'column'}
+        // flexDir={isLargerThan1024 ? 'row' : 'column'}
+        flexDir={['column', 'column', 'column', 'column', 'row']}
         alignItems="center"
         gap={5}
         paddingBottom={isLargerThan1024 ? '0' : "40px"}
