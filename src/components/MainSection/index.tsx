@@ -83,7 +83,7 @@ function MainSection({ logo }: logoProps) {
           <Text
             fontSize={{ xl: "lg", lg: "md", md: "sm", sm: "xs", base: "as" }}
             color="white"
-            maxW={{ md: "70%" }}
+            maxW={{ md: "80%" }}
             textAlign={{ md: "initial", base: "center" }}
             animation={moveTextDownAnimation}
           >
@@ -92,6 +92,7 @@ function MainSection({ logo }: logoProps) {
           </Text>
           <Text
             display={["none", "none", "none", "none", "flex"]}
+            maxW={{ md: "80%" }}
             color='white'
             animation={moveTextDownAnimation}
           >
