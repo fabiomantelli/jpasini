@@ -41,7 +41,7 @@ function MainSection({ logo }: logoProps) {
       <Box width="80vw" display="flex" marginRight="auto" marginLeft="auto">
         <Divider
           position="absolute"
-          // display={["none", "none", "none", "none", "flex"]}
+          display={["none", "none", "none", "none", "flex"]}
           left="0"
           top={{ xl: "300px", lg: "265px", md: "230px" }}
           borderColor="rgba(179,179,179,1)"
@@ -57,7 +57,7 @@ function MainSection({ logo }: logoProps) {
         >
           <Flex
             position="absolute"
-            // display={["none", "none", "none", "none", "flex"]}
+            display={["none", "none", "none", "none", "flex"]}
             width="213px"
             height="213px"
             top={{ xl: "120px", lg: "95px", md: "60px" }}
