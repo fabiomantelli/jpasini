@@ -16,9 +16,10 @@ const theme = extendTheme({
     }
   },
   fonts: {
-    body: "hahmlet, serif",
-    heading: "hahmlet, serif",
-    mono: "Lato, sans-serif",
+    // body: "hahmlet, serif",
+    body: "Titillium Web, sans-serif",
+    heading: "Titillium Web, sans-serif",
+    mono: "Titillium Web, sans-serif",
   },
   fontSizes: {
     as: "0.50rem",

@@ -16,6 +16,7 @@
     "@fontsource/hahmlet": "^4.5.11",
     "@fontsource/lato": "^4.5.8",
     "@fontsource/montserrat": "^4.5.11",
+    "@fontsource/titillium-web": "^4.5.9",
     "framer-motion": "^6",
     "hamburger-react": "^2.5.0",
     "next": "12.2.3",

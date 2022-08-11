@@ -67,11 +67,11 @@ function MainSection({ logo }: logoProps) {
           />
           <Text
             fontSize={{
-              xl: "9xl",
-              lg: "8xl",
-              md: "7xl",
-              sm: "6xl",
-              base: "4xl",
+              xl: "8xl",
+              lg: "7xl",
+              md: "6xl",
+              sm: "5xl",
+              base: "3xl",
             }}
             color="white"
             fontStyle="body"
@@ -95,6 +95,7 @@ function MainSection({ logo }: logoProps) {
             maxW={{ md: "80%" }}
             color='white'
             animation={moveTextDownAnimation}
+            fontSize={{ xl: "lg", lg: "md", md: "sm", sm: "xs", base: "as" }}
           >
             Possui sacada com churrasqueira a carvão com bancada de granito, 1
             vaga de garagem, salão de festas, dois elevadores, guarita,

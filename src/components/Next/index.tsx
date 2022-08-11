@@ -6,8 +6,6 @@ interface LogoProps {
 }
 
 function Next({ logo }: LogoProps) {
- // const [isLargerThan768] = useMediaQuery('(min-width: 768px)');
- 
  return (
   <Flex
    position="absolute"
@@ -19,9 +17,6 @@ function Next({ logo }: LogoProps) {
    height="80px"
    alignItems="center"
    background={['none', 'none', 'none', (logo == "white" ? "green.500" : "black")]}
-   // background={
-   //  isLargerThan768 ? (logo == "white" ? "green.500" : "black") : "none"
-   // }
    justifyContent="space-between"
    marginLeft={['5vw', '5vw', '5vw', '10px']}
   >
@@ -34,7 +29,6 @@ function Next({ logo }: LogoProps) {
     </Text>
    </Box>
    <Box marginRight={['none', 'none', 'none', '50px']}>
-   {/* <Box marginRight={isLargerThan768 ? "50px" : "none"}> */}
     <ArrowLeftIcon color="white" marginRight="50px" />
     <ArrowRightIcon color="white" />
    </Box>
