@@ -43,7 +43,7 @@ function MainSection({ logo }: logoProps) {
           position="absolute"
           display={["none", "none", "none", "none", "flex"]}
           left="0"
-          top={{ xl: "300px", lg: "265px", md: "230px" }}
+          top={{ xl: "275px", lg: "240px" }}
           borderColor="rgba(179,179,179,1)"
           animation={motionLineToRightAnimation}
         />
@@ -60,7 +60,7 @@ function MainSection({ logo }: logoProps) {
             display={["none", "none", "none", "none", "flex"]}
             width="213px"
             height="213px"
-            top={{ xl: "120px", lg: "95px", md: "60px" }}
+            top={{ xl: "90px", lg: "60px", md: "60px" }}
             border="1px solid rgba(179,179,179,0.3)"
             borderRadius="50%"
             animation={motionCircleToRightAnimation}

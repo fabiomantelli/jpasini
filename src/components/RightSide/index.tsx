@@ -41,7 +41,7 @@ function RightSide({ logo }: logoProps) {
       <Divider 
         position='fixed'
         display={["none", "none", "none", "none", "flex"]}
-        top={{ xl: '300px', lg: '265px', md: '230px'}}
+        top={{ xl: "275px", lg: "240px" }}
         width='280px'
         right='0'
         height="0px"
