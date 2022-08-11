@@ -12,7 +12,7 @@ const theme = extendTheme({
       900: '#D9D9D9',
     },
     green: {
-      500: '#21361D'
+      500: '#2e4c46'
     }
   },
   fonts: {
