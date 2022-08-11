@@ -1,13 +1,4 @@
-import {
-  Box,
-  Stack,
-  Text,
-  Flex,
-  Divider,
-  keyframes,
-  useMediaQuery,
-} from "@chakra-ui/react";
-import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
+import { Box, Stack, Text, Flex, Divider, keyframes } from "@chakra-ui/react";
 
 interface logoProps {
   logo: string;
@@ -40,8 +31,6 @@ const moveTextDown = keyframes`
 `;
 
 function MainSection({ logo }: logoProps) {
-  const [isLargerThan768] = useMediaQuery("(min-width: 768px)");
-
   const motionLineToRightAnimation = `${motionLineToRight} 1s linear forwards`;
   const motionCircleToRightAnimation = `${motionCircleToRight} 1s linear forwards`;
   const moveTextUpAnimation = `${moveTextUp} 0.5s ease-in-out`;
@@ -49,16 +38,10 @@ function MainSection({ logo }: logoProps) {
 
   return (
     <>
-      <Box
-        // maxW="1440px"
-        width="80vw"
-        display="flex"
-        marginRight="auto"
-        marginLeft="auto"
-      >
+      <Box width="80vw" display="flex" marginRight="auto" marginLeft="auto">
         <Divider
           position="fixed"
-          display={isLargerThan768 ? "block" : "none"}
+          display={["none", "none", "none", "block"]}
           left="0"
           top={{ xl: "300px", lg: "265px", md: "230px" }}
           border="0px solid rgba(179,179,179,0.3)"
@@ -66,16 +49,15 @@ function MainSection({ logo }: logoProps) {
         />
 
         <Stack
-          height={isLargerThan768 ? "auto" : "70vh"}
+          height={["70vh", "70vh", "70vh", "70vh", "auto"]}
           justifyContent={{ md: "initial", base: "center" }}
           padding="50px 5vw"
           width="100%"
           position="relative"
-          // border="2px solid red"
         >
           <Flex
             position="absolute"
-            display={isLargerThan768 ? "block" : "none"}
+            display={["none", "none", "none", "none", "block"]}
             width="213px"
             height="213px"
             top={{ xl: "120px", lg: "95px", md: "60px" }}
@@ -101,23 +83,20 @@ function MainSection({ logo }: logoProps) {
           <Text
             fontSize={{ xl: "lg", lg: "md", md: "sm", sm: "xs", base: "as" }}
             color="white"
-            maxW={{ md: "60%" }}
+            maxW={{ md: "70%" }}
             textAlign={{ md: "initial", base: "center" }}
             animation={moveTextDownAnimation}
           >
             Projeto com 46 Unidades, todos os apartamentos de 2 quartos, sendo 1
-            suíte.
-            {isLargerThan768 && (
-              <Text>
-                Possui sacada com churrasqueira a carvão com bancada de granito,
-                1 vaga de garagem, salão de festas, dois elevadores, guarita,
-                segurança e serviço de TV.
-              </Text>
-            )}
+            suíte.&nbsp;
+            <Text display={["none", "none", "none", "inline"]}>
+              Possui sacada com churrasqueira a carvão com bancada de granito, 1
+              vaga de garagem, salão de festas, dois elevadores, guarita,
+              segurança e serviço de TV.
+            </Text>
           </Text>
         </Stack>
       </Box>
-      
     </>
   );
 }

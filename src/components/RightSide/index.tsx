@@ -28,18 +28,14 @@ const motionToLeft = keyframes`
 `
 
 function RightSide({ logo }: logoProps) {
-  const [isLargerThan1024] = useMediaQuery('(min-width: 1024px)');
-  const [isLargerThan768] = useMediaQuery('(min-width: 768px)');
   const motionToLeftAnimation = `${motionToLeft} 1s linear backwards`;
 
   return (
     <Box
       width='280px'
       height='100vh'
-      // border="2px solid red"
       background={logo == 'white' ? 'black' : 'green.500'}
       display={['none', 'none', 'none', 'block']}
-      // display={isLargerThan768 ? 'block' : 'none'}
       
     >
       <Divider 
@@ -60,14 +56,12 @@ function RightSide({ logo }: logoProps) {
       >
        <List 
         display='flex'
-        // position="absolute"
         bottom={0}
-        // flexDir={isLargerThan1024 ? 'row' : 'column'}
         flexDir={['column', 'column', 'column', 'column', 'row']}
         alignItems="center"
         gap={5}
-        paddingBottom={isLargerThan1024 ? '0' : "40px"}
-        height={isLargerThan1024 ? "80px" : 'auto'}
+        paddingBottom={['40px', '40px', '40px', '40px', '0']}
+        height={['auto', 'auto', 'auto', 'auto', '80px']}
        >
           <ListItem _hover={{ color: 'green.900', transition: '0.3s'}}>
             <Link href='https://www.instagram.com/jpasiniarquiteturaeengenharia/' target='_blank'>

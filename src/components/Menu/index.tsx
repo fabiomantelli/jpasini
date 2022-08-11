@@ -16,7 +16,9 @@ function Menu({ logo }: LogoProps) {
    top={0}
    height="60px"
    // width='14vw'
-   width={isLargerThan768 ? '260px' : '45vw'}
+//    width={isLargerThan768 ? '260px' : '45vw'}
+   width={['45vw', '45vw', '45vw', '260px', '260px']}
+//    display={['none', 'none', 'none', 'block']}
    margin='10px 10px 0 0'
    padding="5px"
    alignItems='center'
