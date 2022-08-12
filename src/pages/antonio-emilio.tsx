@@ -6,17 +6,18 @@ import Menu from '../components/Menu'
 
 
 interface LogoProps {
-    logo: string
+    logoColor: string;
+    colorMenu: string;
    }
    
 
-function AntonioEmilio({ logo }:  LogoProps) {
+function AntonioEmilio({ logoColor, colorMenu }:  LogoProps) {
     return (
         <Box
             margin="0 auto"
         >
-            <Header logo="green" />
-            <Menu logo={logo} />
+            <Header logoColor={logoColor} colorMenu={colorMenu} />
+            <Menu logoColor={logoColor} />
             <img src="../assets/antonioemilio/antonio-party-room-1.webp"/>
         </Box>
     )
