@@ -8,10 +8,11 @@ import {
 } from '@chakra-ui/react'
 
 interface LogoProps {
-  logoColor: string
+  logoColor: string;
+  colorMenu: string;
 }
 
-function Header({ logoColor }: LogoProps) {
+function Header({ logoColor, colorMenu }: LogoProps) {
   return (
     <Box
       padding='10px 80px 10px 5vw'
@@ -30,12 +31,12 @@ function Header({ logoColor }: LogoProps) {
         <Spacer />
         <List display={['none', 'none', 'none', 'flex', 'block']}>
           <Flex
-            color={logoColor == 'white' ? 'white' : 'black'}
           // border="2px solid red"
           >
             <Link
               href="/projetos"
               style={{ textDecoration: 'none' }}
+              textColor={colorMenu == 'white' ? 'white' : 'black'}
               // _hover={{ color: 'gray.900', transition: '0.3s' }}
               _hover={logoColor == 'white' ? { color: 'gray.900', transition: '0.3s' } : { color: 'green.500', transition: '0.3s' }}
               paddingRight="50px"
@@ -45,6 +46,7 @@ function Header({ logoColor }: LogoProps) {
             <Link
               href="/vendas"
               style={{ textDecoration: 'none' }}
+              textColor={colorMenu == 'white' ? 'white' : 'black'}
               _hover={logoColor == 'white' ? { color: 'gray.900', transition: '0.3s' } : { color: 'green.500', transition: '0.3s' }}
               paddingRight="50px"
             >
@@ -53,6 +55,7 @@ function Header({ logoColor }: LogoProps) {
             <Link
               href="/futuro"
               style={{ textDecoration: 'none' }}
+              textColor={colorMenu == 'white' ? 'white' : 'black'}
               _hover={logoColor == 'white' ? { color: 'gray.900', transition: '0.3s' } : { color: 'green.500', transition: '0.3s' }}
             >
               <ListItem>.Futuro</ListItem>

@@ -5,7 +5,8 @@ export const enterprisesData = [
    secondaryDescription: "Possui sacada com churrasqueira a carvão com bancada de granito, 1 vaga de garagem, salão de festas, dois elevadores, guarita, segurança e serviço de TV.",
    url: "/background-antonio-emilio.webp",
    logoColor: "white",
-   textColor: "white"
+   textColor: "white",
+   colorMenu: "white"
  },
  {
    name: "Residencial Viena",
@@ -13,6 +14,7 @@ export const enterprisesData = [
    secondaryDescription: "1 vaga de garagem, salão de festas, dois elevadores, guarita, segurança e serviço de TV.",
    url: "/background-viena.webp",
    logoColor: "green",
-   textColor: "white"
+   textColor: "white",
+   colorMenu: "white"
  },
 ]

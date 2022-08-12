@@ -22,7 +22,8 @@ const Home: NextPage = () => {
   const [secondaryDescription, setSecondaryDescription] = useState(enterprisesData[0].secondaryDescription);
   const [url, setUrl] = useState(enterprisesData[0].url);
   const [logoColor, setLogoColor] = useState(enterprisesData[0].logoColor);
-  const [textColor, setTextColor] = useState(enterprisesData[0].textColor)
+  const [textColor, setTextColor] = useState(enterprisesData[0].textColor);
+  const [colorMenu, setColorMenu] = useState(enterprisesData[0].colorMenu);
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -33,8 +34,9 @@ const Home: NextPage = () => {
         setSecondaryDescription(enterprise[0].secondaryDescription);
         setUrl(enterprise[0].url);
         setCount(count + 1);
-        setLogoColor(enterprise[0].logoColor)
-        setTextColor(enterprise[0].textColor)
+        setLogoColor(enterprise[0].logoColor);
+        setTextColor(enterprise[0].textColor);
+        setColorMenu(enterprise[0].colorMenu);
       } else {
         setCount(1);
         setName(enterprisesData[0].name);
@@ -43,6 +45,7 @@ const Home: NextPage = () => {
         setUrl(enterprisesData[0].url);
         setLogoColor(enterprisesData[0].logoColor);
         setTextColor(enterprisesData[0].textColor);
+        setColorMenu(enterprisesData[0].colorMenu);
       }
     }, 3000);
 
@@ -59,7 +62,10 @@ const Home: NextPage = () => {
         width={['100vw', '100vw', '100vw', 'calc(100vw - 280px)']}
         height="100vh"
       >
-        <Header logoColor={logoColor} />
+        <Header 
+          logoColor={logoColor} 
+          colorMenu={colorMenu}
+        />
         <Menu logoColor={logoColor} />
         <MainSection 
           logoColor={logoColor}
