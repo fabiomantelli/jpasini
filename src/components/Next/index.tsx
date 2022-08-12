@@ -1,11 +1,14 @@
 import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
-import { Box, Flex, Text, useMediaQuery } from "@chakra-ui/react"
+import { Box, Flex, Text } from "@chakra-ui/react"
 
 interface LogoProps {
- logo: string
+    logoColor: string;
+    name: string;
 }
 
-function Next({ logo }: LogoProps) {
+function Next({ logoColor, name }: LogoProps) {
+    console.log(`name: ${name}`)
+    console.log(`logoColor: ${logoColor}`)
  return (
   <Flex
    position="absolute"
@@ -16,7 +19,7 @@ function Next({ logo }: LogoProps) {
    width={['calc(95vw - 10px)','calc(95vw - 10px)', 'calc(95vw - 10px)', 480]}
    height="80px"
    alignItems="center"
-   background={['none', 'none', 'none', (logo == "white" ? "green.500" : "black")]}
+   background={['none', 'none', 'none', (logoColor == "white" ? "green.500" : "black")]}
    justifyContent="space-between"
    marginLeft={['5vw', '5vw', '5vw', '10px']}
   >
@@ -24,11 +27,15 @@ function Next({ logo }: LogoProps) {
     <Text color="white" fontSize="xs">
      PRÓXIMO
     </Text>
-    <Text color="white" fontSize="3xl">
-     VIENA
+    <Text 
+        key={name}
+        color="white" 
+        fontSize="3xl"
+    >
+     {name}
     </Text>
    </Box>
-   <Box marginRight={['none', 'none', 'none', '50px']}>
+   <Box marginRight={['10px', '10px', 'none', '50px']}>
     <ArrowLeftIcon color="white" marginRight="50px" />
     <ArrowRightIcon color="white" />
    </Box>

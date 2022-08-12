@@ -13,7 +13,6 @@ interface LogoProps {
 function AntonioEmilio({ logo }:  LogoProps) {
     return (
         <Box
-            // maxW="100vw"
             margin="0 auto"
         >
             <Header logo="green" />

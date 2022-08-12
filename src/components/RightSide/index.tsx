@@ -19,35 +19,18 @@ import {
 } from 'react-icons/ri'
 
 interface logoProps {
-  logo: string
+  logoColor: string
 }
 
-const motionToLeft = keyframes`
-  0% { width: 0%; }
-  100% { width: 280px; }
-`
-
-function RightSide({ logo }: logoProps) {
-  const motionToLeftAnimation = `${motionToLeft} 1s linear backwards`;
-
+function RightSide({ logoColor }: logoProps) {
   return (
     <Box
       width='280px'
       height='100vh'
-      background={logo == 'white' ? 'black' : 'green.500'}
+      background={logoColor == 'white' ? 'black' : 'green.500'}
       display={['none', 'none', 'none', 'block']}
       
     >
-      <Divider 
-        position='fixed'
-        display={["none", "none", "none", "none", "flex"]}
-        top={{ xl: "275px", lg: "240px" }}
-        width='280px'
-        right='0'
-        height="0px"
-        animation={motionToLeftAnimation}
-        borderColor="rgba(179,179,179,1)"
-      />
       <Flex 
         alignItems='flex-end'
         justifyContent='center'
