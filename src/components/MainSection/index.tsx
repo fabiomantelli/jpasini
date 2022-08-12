@@ -1,4 +1,5 @@
 import { Box, Stack, Text, Flex, Divider, keyframes } from "@chakra-ui/react";
+import EmilioText from "../EmilioText";
 
 interface logoProps {
   logo: string;
@@ -13,28 +14,9 @@ const motionCircleToRight = keyframes`
   100% { left: 3%; }
 `;
 
-const moveTextUp = keyframes`
-  0%  {
-    transform: translateY(30px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-`;
-const moveTextDown = keyframes`
-  0%  {
-    transform: translateY(-30px);
-  }
-  100% {
-    transform: translateY(0);
-  }
-`;
-
 function MainSection({ logo }: logoProps) {
   const motionLineToRightAnimation = `${motionLineToRight} 1s linear forwards`;
   const motionCircleToRightAnimation = `${motionCircleToRight} 1s linear forwards`;
-  const moveTextUpAnimation = `${moveTextUp} 0.5s ease-in-out`;
-  const moveTextDownAnimation = `${moveTextDown} 1s ease-in-out`;
 
   return (
     <>
@@ -47,7 +29,6 @@ function MainSection({ logo }: logoProps) {
           borderColor="rgba(179,179,179,1)"
           animation={motionLineToRightAnimation}
         />
-
         <Stack
           height={["70vh", "70vh", "70vh", "70vh", "auto"]}
           justifyContent={{ md: "initial", base: "center" }}
@@ -65,42 +46,7 @@ function MainSection({ logo }: logoProps) {
             borderRadius="50%"
             animation={motionCircleToRightAnimation}
           />
-          <Text
-            fontSize={{
-              xl: "8xl",
-              lg: "7xl",
-              md: "6xl",
-              sm: "5xl",
-              base: "3xl",
-            }}
-            color="white"
-            fontStyle="body"
-            textAlign={{ md: "initial", base: "center" }}
-            animation={moveTextUpAnimation}
-          >
-            Antônio Emílio
-          </Text>
-          <Text
-            fontSize={{ xl: "lg", lg: "md", md: "sm", sm: "xs", base: "as" }}
-            color="white"
-            maxW={{ md: "80%" }}
-            textAlign={{ md: "initial", base: "center" }}
-            animation={moveTextDownAnimation}
-          >
-            Projeto com 46 Unidades, todos os apartamentos de 2 quartos, sendo 1
-            suíte. &nbsp;
-          </Text>
-          <Text
-            display={["none", "none", "none", "none", "flex"]}
-            maxW={{ md: "80%" }}
-            color='white'
-            animation={moveTextDownAnimation}
-            fontSize={{ xl: "lg", lg: "md", md: "sm", sm: "xs", base: "as" }}
-          >
-            Possui sacada com churrasqueira a carvão com bancada de granito, 1
-            vaga de garagem, salão de festas, dois elevadores, guarita,
-            segurança e serviço de TV.
-          </Text>
+          <EmilioText />
         </Stack>
       </Box>
     </>
