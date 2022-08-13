@@ -91,7 +91,7 @@ const Home: NextPage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       handleNextEnterprises();
-    }, 3000);
+    }, 7000);
 
     return () => clearInterval(interval);
   }, [count]);
