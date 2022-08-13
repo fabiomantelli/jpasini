@@ -2,37 +2,41 @@ import { Divider, Flex, keyframes, Text } from "@chakra-ui/react";
 
 const moveTextUp = keyframes`
   0%  {
+    opacity: 0;
     transform: translateY(30px);
   }
   100% {
-    transform: translateY(0);
+    /* transform: translateY(0); */
+    opacity: 1;
   }
 `;
 const moveTextDown = keyframes`
-  0%  {
-    transform: translateY(-30px);
+  0%, 50%  {
+    transform: translateY(-20px);
+    opacity: 0;
   }
+
   100% {
-    transform: translateY(0);
+    /* transform: translateY(0); */
+    opacity: 1;
   }
 `;
 
 const motionLineToRight = keyframes`
-  0% { width: 0%; }
+  0%, 50% { width: 0%; }
   100% { width: calc(100vw - 280px); }
 `;
 const motionCircleToRight = keyframes`
-  0% { left: -20%; }
+  0%, 50% { left: -20%; }
   100% { left: 3%; }
 `;
 
 const motionToLeft = keyframes`
-  0% { width: 0%; }
+  0%, 50% { width: 0%; }
   100% { width: 280px; }
 `
 
 interface EnterpriseProps {
-  logoColor: string;
   textColor: string;
   count: number;
   name: string;
@@ -40,8 +44,8 @@ interface EnterpriseProps {
   secondaryDescription: string;
 }
 
-function EmilioText({ logoColor, textColor, count, name, mainDescription, secondaryDescription }: EnterpriseProps) {
-  const moveTextUpAnimation = `${moveTextUp} 1.5s ease-in-out`;
+function EmilioText({ textColor, count, name, mainDescription, secondaryDescription }: EnterpriseProps) {
+  const moveTextUpAnimation = `${moveTextUp} 1s ease-in-out`;
   const moveTextDownAnimation = `${moveTextDown} 1.5s ease-in-out`;
   const motionLineToRightAnimation = `${motionLineToRight} 1.5s linear forwards`;
   const motionCircleToRightAnimation = `${motionCircleToRight} 1.5s linear forwards`;

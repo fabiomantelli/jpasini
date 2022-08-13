@@ -1,14 +1,12 @@
 import { ArrowLeftIcon, ArrowRightIcon } from "@chakra-ui/icons";
 import { Box, Flex, Text } from "@chakra-ui/react"
 
-interface LogoProps {
+interface EnterpriseProps {
     logoColor: string;
     name: string;
 }
 
-function Next({ logoColor, name }: LogoProps) {
-    console.log(`name: ${name}`)
-    console.log(`logoColor: ${logoColor}`)
+function Next({ logoColor, name }: EnterpriseProps) {
  return (
   <Flex
    position="absolute"

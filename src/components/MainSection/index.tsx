@@ -2,7 +2,6 @@ import { Box, Stack } from "@chakra-ui/react";
 import EmilioText from "../EmilioText";
 
 interface EnterpriseProps {
-  logoColor: string;
   textColor: string;
   count: number;
   name: string;
@@ -10,7 +9,7 @@ interface EnterpriseProps {
   secondaryDescription: string;
 }
 
-function MainSection({ logoColor, textColor, count, name, mainDescription, secondaryDescription }: EnterpriseProps) {
+function MainSection({ textColor, count, name, mainDescription, secondaryDescription }: EnterpriseProps) {
   return (
     <>
       <Box width="80vw" display="flex" marginRight="auto" marginLeft="auto">
@@ -22,7 +21,6 @@ function MainSection({ logoColor, textColor, count, name, mainDescription, secon
           position="relative"
         >
           <EmilioText 
-            logoColor={logoColor}
             textColor={textColor}
             count={count}
             name={name}

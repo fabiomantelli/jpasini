@@ -12,12 +12,14 @@ import Next from "../components/Next";
 import { enterprisesData } from "../data/enterprises"
 
 const fadeIn = keyframes`
-  0% { opacity: 0.5; }
+  0% { opacity: 0.6; }
   100% { opacity: 1; }
 `
 const Home: NextPage = () => {
+  const enterpriseNext = enterprisesData.filter((data, index) => index == 1);
   const [count, setCount] = useState(1);
   const [name, setName] = useState(enterprisesData[0].name);
+  const [nextName, setNextName] = useState(enterpriseNext[0].name);
   const [mainDescription, setMainDescription] = useState(enterprisesData[0].mainDescription);
   const [secondaryDescription, setSecondaryDescription] = useState(enterprisesData[0].secondaryDescription);
   const [url, setUrl] = useState(enterprisesData[0].url);
@@ -28,8 +30,12 @@ const Home: NextPage = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       if (count < Object.keys(enterprisesData).length) {
-        const enterprise = enterprisesData.filter((data, index) => index === count);
+        
+        const enterprise = enterprisesData.filter((data, index) => index == count);
+        const enterpriseNext = enterprisesData.filter((data, index) => index == count - 1);
+        
         setName(enterprise[0].name);
+        setNextName(enterpriseNext[0].name)
         setMainDescription(enterprise[0].mainDescription);
         setSecondaryDescription(enterprise[0].secondaryDescription);
         setUrl(enterprise[0].url);
@@ -37,9 +43,13 @@ const Home: NextPage = () => {
         setLogoColor(enterprise[0].logoColor);
         setTextColor(enterprise[0].textColor);
         setColorMenu(enterprise[0].colorMenu);
+
       } else {
+
         setCount(1);
         setName(enterprisesData[0].name);
+        const enterpriseNext =  enterprisesData.filter((data, index) => index == 1)
+        setNextName(enterpriseNext[0].name);
         setMainDescription(enterprisesData[0].mainDescription);
         setSecondaryDescription(enterprisesData[0].secondaryDescription);
         setUrl(enterprisesData[0].url);
@@ -47,7 +57,7 @@ const Home: NextPage = () => {
         setTextColor(enterprisesData[0].textColor);
         setColorMenu(enterprisesData[0].colorMenu);
       }
-    }, 7000);
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [count]);
@@ -57,7 +67,7 @@ const Home: NextPage = () => {
       <Box
         key={url}
         backgroundImage={url}
-        animation={`${fadeIn} 0.7s linear`}
+        animation={`${fadeIn} 1s ease`}
         backgroundSize="cover"
         width={['100vw', '100vw', '100vw', 'calc(100vw - 280px)']}
         height="100vh"
@@ -68,7 +78,6 @@ const Home: NextPage = () => {
         />
         <Menu logoColor={logoColor} />
         <MainSection 
-          logoColor={logoColor}
           textColor={textColor}
           count={count}
           name={name}
@@ -76,9 +85,9 @@ const Home: NextPage = () => {
           secondaryDescription={secondaryDescription}
         />
         <Next 
-          key={name}
+          key={nextName}
           logoColor={logoColor} 
-          name={name}
+          name={nextName}
         />
       </Box>
 
