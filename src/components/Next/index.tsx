@@ -28,13 +28,13 @@ function Next({ logoColor, name }: EnterpriseProps) {
     <Text 
         key={name}
         color="white" 
-        fontSize="3xl"
+        fontSize="2xl"
     >
      {name}
     </Text>
    </Box>
    <Box marginRight={['10px', '10px', 'none', '50px']}>
-    <ArrowLeftIcon color="white" marginRight="50px" />
+    <ArrowLeftIcon color="white" marginRight="30px" />
     <ArrowRightIcon color="white" />
    </Box>
   </Flex>
