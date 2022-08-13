@@ -17,4 +17,13 @@ export const enterprisesData = [
    textColor: "white",
    colorMenu: "white"
  },
+ {
+   name: "Internacional",
+   mainDescription: "Garagens, Salas Comerciais e spa.",
+   secondaryDescription: "3 vaga de garagem, dois elevadores, guarita, segurança e serviço de TV.",
+   url: "/background-internacional.webp",
+   logoColor: "green",
+   textColor: "green",
+   colorMenu: "green"
+ },
 ]

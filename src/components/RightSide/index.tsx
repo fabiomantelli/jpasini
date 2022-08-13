@@ -1,16 +1,11 @@
 import { 
   Box, 
   Flex, 
-  Text, 
   List, 
   ListItem, 
   Link, 
-  keyframes, 
-  Divider, 
-  useMediaQuery 
 } from '@chakra-ui/react';
 
-import { Slant as Hamburger } from 'hamburger-react'
 import {
   RiFacebookBoxLine,
   RiWhatsappLine,
@@ -19,7 +14,7 @@ import {
 } from 'react-icons/ri'
 
 interface logoProps {
-  logoColor: string
+  logoColor: string;
 }
 
 function RightSide({ logoColor }: logoProps) {
@@ -29,7 +24,6 @@ function RightSide({ logoColor }: logoProps) {
       height='100vh'
       background={logoColor == 'white' ? 'black' : 'green.500'}
       display={['none', 'none', 'none', 'block']}
-      
     >
       <Flex 
         alignItems='flex-end'

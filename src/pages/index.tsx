@@ -27,37 +27,71 @@ const Home: NextPage = () => {
   const [textColor, setTextColor] = useState(enterprisesData[0].textColor);
   const [colorMenu, setColorMenu] = useState(enterprisesData[0].colorMenu);
 
+  function handleNextEnterprises() {
+    if (count < Object.keys(enterprisesData).length) {
+      const enterprise = enterprisesData.filter((data, index) => index == count);
+      const enterpriseNext = enterprisesData.filter((data, index) => {
+        if (count !== Object.keys(enterprisesData).length - 1) {
+          return index == count + 1
+        } else {
+          return index == 0
+        }
+      });
+      setName(enterprise[0].name);
+      setNextName(enterpriseNext[0].name)
+      setMainDescription(enterprise[0].mainDescription);
+      setSecondaryDescription(enterprise[0].secondaryDescription);
+      setUrl(enterprise[0].url);
+      setLogoColor(enterprise[0].logoColor);
+      setTextColor(enterprise[0].textColor);
+      setColorMenu(enterprise[0].colorMenu);
+      setCount(count + 1);
+    } else {
+      setCount(1);
+      setName(enterprisesData[0].name);
+      const enterpriseNext = enterprisesData.filter((data, index) => index == 1)
+      setNextName(enterpriseNext[0].name);
+      setMainDescription(enterprisesData[0].mainDescription);
+      setSecondaryDescription(enterprisesData[0].secondaryDescription);
+      setUrl(enterprisesData[0].url);
+      setLogoColor(enterprisesData[0].logoColor);
+      setTextColor(enterprisesData[0].textColor);
+      setColorMenu(enterprisesData[0].colorMenu);
+    }
+  }
+
+  function handlePreviousClick() {
+    if (count > 1) {
+      const enterprise = enterprisesData.filter((data, index) => index == count - 2);
+      const enterpriseNext = enterprisesData.filter((data, index) => index ==  count - 1);
+      setName(enterprise[0].name);
+      setNextName(enterpriseNext[0].name)
+      setMainDescription(enterprise[0].mainDescription);
+      setSecondaryDescription(enterprise[0].secondaryDescription);
+      setUrl(enterprise[0].url);
+      setLogoColor(enterprise[0].logoColor);
+      setTextColor(enterprise[0].textColor);
+      setColorMenu(enterprise[0].colorMenu);
+      setCount(count - 1);
+    } else {
+      const enterprise = enterprisesData.filter((data, index) => index == Object.keys(enterprisesData).length - 1);
+      setName(enterprise[0].name);
+      const enterpriseNext = enterprisesData.filter((data, index) => index == count - 1)
+      setNextName(enterpriseNext[0].name);
+      setMainDescription(enterprise[0].mainDescription);
+      setSecondaryDescription(enterprise[0].secondaryDescription);
+      setUrl(enterprise[0].url);
+      setLogoColor(enterprise[0].logoColor);
+      setTextColor(enterprise[0].textColor);
+      setColorMenu(enterprise[0].colorMenu);
+      setCount(Object.keys(enterprisesData).length);
+    }
+  }
+
   useEffect(() => {
     const interval = setInterval(() => {
-      if (count < Object.keys(enterprisesData).length) {
-        
-        const enterprise = enterprisesData.filter((data, index) => index == count);
-        const enterpriseNext = enterprisesData.filter((data, index) => index == count - 1);
-        
-        setName(enterprise[0].name);
-        setNextName(enterpriseNext[0].name)
-        setMainDescription(enterprise[0].mainDescription);
-        setSecondaryDescription(enterprise[0].secondaryDescription);
-        setUrl(enterprise[0].url);
-        setCount(count + 1);
-        setLogoColor(enterprise[0].logoColor);
-        setTextColor(enterprise[0].textColor);
-        setColorMenu(enterprise[0].colorMenu);
-
-      } else {
-
-        setCount(1);
-        setName(enterprisesData[0].name);
-        const enterpriseNext =  enterprisesData.filter((data, index) => index == 1)
-        setNextName(enterpriseNext[0].name);
-        setMainDescription(enterprisesData[0].mainDescription);
-        setSecondaryDescription(enterprisesData[0].secondaryDescription);
-        setUrl(enterprisesData[0].url);
-        setLogoColor(enterprisesData[0].logoColor);
-        setTextColor(enterprisesData[0].textColor);
-        setColorMenu(enterprisesData[0].colorMenu);
-      }
-    }, 7000);
+      handleNextEnterprises();
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [count]);
@@ -72,26 +106,30 @@ const Home: NextPage = () => {
         width={['100vw', '100vw', '100vw', 'calc(100vw - 280px)']}
         height="100vh"
       >
-        <Header 
-          logoColor={logoColor} 
+        <Header
+          logoColor={logoColor}
           colorMenu={colorMenu}
         />
         <Menu logoColor={logoColor} />
-        <MainSection 
+        <MainSection
           textColor={textColor}
           count={count}
           name={name}
           mainDescription={mainDescription}
           secondaryDescription={secondaryDescription}
         />
-        <Next 
+        <Next
           key={nextName}
-          logoColor={logoColor} 
+          logoColor={logoColor}
           name={nextName}
+          nextClick={handleNextEnterprises}
+          previousClick={handlePreviousClick}
         />
       </Box>
 
-      <RightSide logoColor={logoColor} />
+      <RightSide
+        logoColor={logoColor}
+      />
     </Flex>
   );
 };
