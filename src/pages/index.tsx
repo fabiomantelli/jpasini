@@ -57,7 +57,7 @@ const Home: NextPage = () => {
         setTextColor(enterprisesData[0].textColor);
         setColorMenu(enterprisesData[0].colorMenu);
       }
-    }, 6000);
+    }, 7000);
 
     return () => clearInterval(interval);
   }, [count]);
