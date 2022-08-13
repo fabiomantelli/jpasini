@@ -58,7 +58,7 @@ function EmilioText({ textColor, count, name, mainDescription, secondaryDescript
         position="fixed"
         display={["none", "none", "none", "none", "flex"]}
         left="0"
-        top={{ xl: "275px", lg: "240px" }}
+        top={{ xl: "275px", lg: "248px" }}
         borderColor="rgba(179,179,179,1)"
         animation={motionLineToRightAnimation}
       />
