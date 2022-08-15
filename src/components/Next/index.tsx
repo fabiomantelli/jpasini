@@ -45,13 +45,13 @@ function Next({ logoColor, name, nextClick, previousClick }: EnterpriseProps) {
           marginRight="30px"
           onClick={previousClick}
           cursor="pointer"
-          _hover={{ color: 'green.600', transition: '0.3s'}}
+          _hover={{ color: 'green.600', transition: '0.3s' }}
         />
         <ArrowRightIcon
           color="white"
           onClick={nextClick}
           cursor="pointer"
-          _hover={{ color: 'green.600', transition: '0.3s'}}
+          _hover={{ color: 'green.600', transition: '0.3s' }}
         />
       </Box>
     </Flex>

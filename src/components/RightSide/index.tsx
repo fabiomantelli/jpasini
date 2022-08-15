@@ -1,9 +1,9 @@
-import { 
-  Box, 
-  Flex, 
-  List, 
-  ListItem, 
-  Link, 
+import {
+  Box,
+  Flex,
+  List,
+  ListItem,
+  Link,
 } from '@chakra-ui/react';
 
 import {
@@ -25,37 +25,37 @@ function RightSide({ logoColor }: logoProps) {
       background={logoColor == 'white' ? 'black' : 'green.500'}
       display={['none', 'none', 'none', 'block']}
     >
-      <Flex 
+      <Flex
         alignItems='flex-end'
         justifyContent='center'
         color='white'
         height="100vh"
       >
-       <List 
-        display='flex'
-        bottom={0}
-        flexDir={['column', 'column', 'column', 'column', 'row']}
-        alignItems="center"
-        gap={5}
-        paddingBottom={['40px', '40px', '40px', '40px', '0']}
-        height={['auto', 'auto', 'auto', 'auto', '80px']}
-       >
-          <ListItem _hover={{ color: 'green.600', transition: '0.3s'}}>
+        <List
+          display='flex'
+          bottom={0}
+          flexDir={['column', 'column', 'column', 'column', 'row']}
+          alignItems="center"
+          gap={5}
+          paddingBottom={['40px', '40px', '40px', '40px', '0']}
+          height={['auto', 'auto', 'auto', 'auto', '80px']}
+        >
+          <ListItem _hover={{ color: 'green.600', transition: '0.3s' }}>
             <Link href='https://www.instagram.com/jpasiniarquiteturaeengenharia/' target='_blank'>
               <RiInstagramLine size={20} />
             </Link>
           </ListItem>
-          <ListItem _hover={{ color: 'green.600', transition: '0.3s'}}>
+          <ListItem _hover={{ color: 'green.600', transition: '0.3s' }}>
             <Link href='https://wa.me/5548999517642' target='_blank'>
               <RiWhatsappLine size={20} />
             </Link>
           </ListItem>
-          <ListItem _hover={{ color: 'green.600', transition: '0.3s'}}>
+          <ListItem _hover={{ color: 'green.600', transition: '0.3s' }}>
             <Link href='https://www.facebook.com/jpasiniarquiteturaeengenharia/' target='_blank'>
               <RiFacebookBoxLine size={20} />
             </Link>
           </ListItem>
-          <ListItem _hover={{ color: 'green.600', transition: '0.3s'}}>
+          <ListItem _hover={{ color: 'green.600', transition: '0.3s' }}>
             <Link href='https://www.linkedin.com/company/jpasini/' target='_blank'>
               <RiLinkedinLine size={20} />
             </Link>

@@ -20,7 +20,7 @@ function MainSection({ textColor, count, name, mainDescription, secondaryDescrip
           width={['100%', '100%', '100%', 'calc(100vw - 280px);']}
           position="relative"
         >
-          <EmilioText 
+          <EmilioText
             textColor={textColor}
             count={count}
             name={name}

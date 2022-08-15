@@ -62,7 +62,7 @@ function EmilioText({ textColor, count, name, mainDescription, secondaryDescript
         borderColor="rgba(179,179,179,1)"
         animation={motionLineToRightAnimation}
       />
-      <Divider 
+      <Divider
         key={count + `rightLine`}
         position='fixed'
         display={["none", "none", "none", "none", "flex"]}
