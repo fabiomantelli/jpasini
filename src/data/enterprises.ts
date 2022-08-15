@@ -4,7 +4,7 @@ export const enterprisesData = [
     mainDescription: "Projeto com 46 Unidades, todos os apartamentos de 2 quartos, sendo 1 suíte.",
     secondaryDescription: "Possui sacada com churrasqueira a carvão com bancada de granito, 1 vaga de garagem, salão de festas, dois elevadores, guarita, segurança e serviço de TV.",
     url: "/assets/background-antonio-emilio.webp",
-    path: "/empreendimentos/antonio-emilio",
+    path: "antonio-emilio",
     logoColor: "white",
     textColor: "white",
     colorMenu: "white"
@@ -14,6 +14,7 @@ export const enterprisesData = [
     mainDescription: "Projeto com 30 Unidades, todos os apartamentos de 3 quartos, sendo 2 suíte.",
     secondaryDescription: "1 vaga de garagem, salão de festas, dois elevadores, guarita, segurança e serviço de TV.",
     url: "/assets/background-viena.webp",
+    path: "residencial-viena",
     logoColor: "green",
     textColor: "white",
     colorMenu: "white"
@@ -23,6 +24,7 @@ export const enterprisesData = [
     mainDescription: "Garagens, Salas Comerciais e spa.",
     secondaryDescription: "3 vaga de garagem, dois elevadores, guarita, segurança e serviço de TV.",
     url: "/assets/background-internacional.webp",
+    path: 'internacional',
     logoColor: "green",
     textColor: "green",
     colorMenu: "green"

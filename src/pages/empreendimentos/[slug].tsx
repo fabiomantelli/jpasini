@@ -1,9 +1,11 @@
-import { Box } from "@chakra-ui/react"
+import { Box, Text } from "@chakra-ui/react"
 import { useRouter } from "next/router";
+import { GetStaticProps } from "next";
 import Header from "../../components/Header"
 import Menu from '../../components/Menu'
 
 interface EnterpriseProps {
+  enterprise: [{
     name: string;
     mainDescription: string;
     secondaryDescription: string;
@@ -12,39 +14,45 @@ interface EnterpriseProps {
     logoColor: string;
     textColor: string;
     colorMenu: string;
+  }]
 }
 
-import { enterprisesData } from "../../data/enterprises";
-  
-function AntonioEmilio(enterpriseData: EnterpriseProps) {
-  const enterprise = enterprisesData.filter(data => data.path === asPath)
+import { enterprisesData } from "../../data/enterprises"
 
-  console.log(`enterprise: ${JSON.stringify(enterprise[0].colorMenu)}`)
-
+function Empreendimentos({ enterprise }: EnterpriseProps) {
   return (
     <Box
       margin="0 auto"
       backgroundColor="#D9D9D9"
     >
       <Header
-          logoColor={JSON.stringify(enterprise[0].logoColor)}
-          colorMenu={JSON.stringify(enterprise[0].colorMenu)}
-        />
-        <Menu logoColor={JSON.stringify(enterprise[0].logoColor)} />
-        <h1>{asPath}</h1>
-      <img src="../assets/antonioemilio/antonio-party-room-1.webp" />
+        logoColor="green"
+        colorMenu={enterprise[0].colorMenu}
+      />
+      <Menu logoColor={enterprise[0].logoColor} />
+      <img src={`..${enterprise[0].url}`} />
     </Box>
   )
 }
 
-export default AntonioEmilio
+export default Empreendimentos
 
-
-export function getStaticProps() {
-  const { asPath } = useRouter();
-  const enterprise = enterprisesData.filter(data => data.url == asPath)
-
+export async function getStaticPaths() {
   return {
-    props: enterprise
+    paths: [
+      { params: { slug: 'antonio-emilio' } },
+      { params: { slug: 'residencial-viena' } },
+      { params: { slug: 'internacional' } },
+    ],
+    fallback: false
+  }
+}
+
+export async function getStaticProps({ params }: any) {
+  const path = params.slug;
+  const enterprise = enterprisesData.filter(data => data.path === path)
+  
+  return {
+    props: { enterprise }
   }
 }
