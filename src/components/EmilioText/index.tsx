@@ -6,7 +6,6 @@ const moveTextUp = keyframes`
     transform: translateY(30px);
   }
   100% {
-    /* transform: translateY(0); */
     opacity: 1;
   }
 `;
@@ -17,7 +16,6 @@ const moveTextDown = keyframes`
   }
 
   100% {
-    /* transform: translateY(0); */
     opacity: 1;
   }
 `;
