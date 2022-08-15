@@ -40,22 +40,22 @@ function RightSide({ logoColor }: logoProps) {
         paddingBottom={['40px', '40px', '40px', '40px', '0']}
         height={['auto', 'auto', 'auto', 'auto', '80px']}
        >
-          <ListItem _hover={{ color: 'green.900', transition: '0.3s'}}>
+          <ListItem _hover={{ color: 'green.600', transition: '0.3s'}}>
             <Link href='https://www.instagram.com/jpasiniarquiteturaeengenharia/' target='_blank'>
               <RiInstagramLine size={20} />
             </Link>
           </ListItem>
-          <ListItem _hover={{ color: 'green.900', transition: '0.3s'}}>
+          <ListItem _hover={{ color: 'green.600', transition: '0.3s'}}>
             <Link href='https://wa.me/5548999517642' target='_blank'>
               <RiWhatsappLine size={20} />
             </Link>
           </ListItem>
-          <ListItem _hover={{ color: 'green.900', transition: '0.3s'}}>
+          <ListItem _hover={{ color: 'green.600', transition: '0.3s'}}>
             <Link href='https://www.facebook.com/jpasiniarquiteturaeengenharia/' target='_blank'>
               <RiFacebookBoxLine size={20} />
             </Link>
           </ListItem>
-          <ListItem _hover={{ color: 'green.900', transition: '0.3s'}}>
+          <ListItem _hover={{ color: 'green.600', transition: '0.3s'}}>
             <Link href='https://www.linkedin.com/company/jpasini/' target='_blank'>
               <RiLinkedinLine size={20} />
             </Link>
