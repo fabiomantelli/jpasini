@@ -7,7 +7,12 @@ export default class Document extends NextDocument {
   render() {
     return (
       <Html lang='en'>
-        <Head />
+        <Head>
+          <link 
+            href="http://fonts.cdnfonts.com/css/sf-pro-display" 
+            rel="stylesheet"
+          />
+        </Head>
         <body>
           {/* 👇 Here's the script */}
           <ColorModeScript initialColorMode={theme.config.initialColorMode} />

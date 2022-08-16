@@ -17,7 +17,7 @@ function Menu({ logoColor }: LogoProps) {
       margin='10px 10px 0 0'
       padding="5px"
       alignItems='center'
-      background={logoColor == 'white' ? 'green.500' : 'black'}
+      background={logoColor == 'white' ? 'black' : 'green.500'}
       justifyContent='space-evenly'
     >
       <Text

@@ -12,7 +12,6 @@ interface LogoProps {
   colorMenu: string;
 }
 
-// function Header({ logoColor, colorMenu }: LogoProps) {
 function Header(enterprise: LogoProps) {
   return (
     <Box
@@ -30,15 +29,18 @@ function Header(enterprise: LogoProps) {
         <Spacer />
         <List display={['none', 'none', 'none', 'flex', 'block']}>
           <Flex
+            fontSize='sm'
           >
             <Link
               href="/empreendimentos/antonio-emilio"
               style={{ textDecoration: 'none' }}
               textColor={enterprise.colorMenu == 'white' ? 'white' : 'black'}
-              _hover={enterprise.logoColor == 'white' ? { color: 'gray.900', transition: '0.3s' } : { color: 'green.500', transition: '0.3s' }}
+              _hover={enterprise.logoColor == 'white' ? 
+                { color: 'gray.900', transition: '0.3s' } : 
+                { color: 'green.500', transition: '0.3s' }}
               paddingRight="50px"
             >
-              <ListItem>.Antonio</ListItem>
+              <ListItem>.Projetos</ListItem>
             </Link>
             <Link
               href="/vendas"

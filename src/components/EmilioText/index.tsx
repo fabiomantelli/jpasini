@@ -94,7 +94,7 @@ function EmilioText({ textColor, count, name, mainDescription, secondaryDescript
         color={textColor == 'white' ? 'white' : 'black'}
         fontStyle="body"
         textAlign={{ md: "initial", base: "center" }}
-        textShadow="1px 3px 5px #424141"
+        textShadow="1px 1px 1px #302e2e"
         animation={moveTextUpAnimation}
       >
         {name}
@@ -105,7 +105,7 @@ function EmilioText({ textColor, count, name, mainDescription, secondaryDescript
         color={textColor == 'white' ? 'white' : 'black'}
         maxW={{ md: "80%" }}
         textAlign={{ md: "initial", base: "center" }}
-        textShadow="1px 3px 5px #424141"
+        textShadow="1px 1px 1px #302e2e"
         animation={moveTextDownAnimation}
       >
         {mainDescription}
@@ -116,8 +116,8 @@ function EmilioText({ textColor, count, name, mainDescription, secondaryDescript
         display={["none", "none", "none", "none", "flex"]}
         maxW={{ md: "80%" }}
         color={textColor == 'white' ? 'white' : 'black'}
-        textShadow="1px 3px 5px #424141"
         animation={moveTextDownAnimation}
+        textShadow="1px 1px 1px #302e2e"
         fontSize={{ xl: "lg", lg: "md", md: "sm", sm: "xs", base: "as" }}
       >
         {secondaryDescription}

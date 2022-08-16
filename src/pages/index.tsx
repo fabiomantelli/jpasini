@@ -117,7 +117,7 @@ const Home: NextPage = () => {
       </Box>
 
       <RightSide
-        logoColor={nextEnterprise.logoColor}
+        logoColor={enterprise.logoColor}
       />
     </Flex>
   );

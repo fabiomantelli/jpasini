@@ -9,6 +9,7 @@ const theme = extendTheme({
     gray: {
       50: '#f7fafc',
       // ...
+      500: '#969696',
       900: '#D9D9D9',
     },
     green: {
@@ -19,9 +20,9 @@ const theme = extendTheme({
   },
   fonts: {
     // body: "hahmlet, serif",
-    body: "Titillium Web, sans-serif",
-    heading: "Titillium Web, sans-serif",
-    mono: "Titillium Web, sans-serif",
+    body: "SF Pro Display, sans-serif",
+    heading: "SF Pro Display, sans-serif",
+    mono: "SF Pro Display, sans-serif",
   },
   fontSizes: {
     as: "0.50rem",
@@ -37,7 +38,7 @@ const theme = extendTheme({
     "6xl": "3.75rem",
     "7xl": "4.5rem",
     "8xl": "6rem",
-    "9xl": "8rem",
+    "9xl": "7rem",
   },
   fontWeights: {
     hairline: 100,

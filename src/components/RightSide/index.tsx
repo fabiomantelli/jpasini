@@ -22,7 +22,7 @@ function RightSide({ logoColor }: logoProps) {
     <Box
       width='280px'
       height='100vh'
-      background={logoColor == 'white' ? 'black' : 'green.500'}
+      background={logoColor == 'white' ? 'green.500' : 'black'}
       display={['none', 'none', 'none', 'block']}
     >
       <Flex
