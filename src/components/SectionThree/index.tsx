@@ -1,22 +1,28 @@
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 
-interface SectionProps {
-  imagePathOne: string;
-  imagePathTwo: string;
-  imagePathThree: string;
-  imageNameOne: string;
-  imageNameTwo: string;
-  imageNameThree: string;
+interface ImageProps {
+  imageOne: {
+    id: number;
+    url: string;
+    alt: string;
+  },
+  imageTwo: {
+    id: number;
+    url: string;
+    alt: string;
+  },
+  imageThree: {
+    id: number;
+    url: string;
+    alt: string;
+  },
 }
 
 function SectionThree({
-  imagePathOne,
-  imagePathTwo,
-  imagePathThree,
-  imageNameOne,
-  imageNameTwo,
-  imageNameThree,
-}: SectionProps) {
+  imageOne,
+  imageTwo,
+  imageThree,
+}: ImageProps) {
   return (
     <>
       <Box as="section">
@@ -28,8 +34,8 @@ function SectionThree({
           paddingBottom={10}
         >
           <Image
-            src={imagePathOne}
-            alt={imageNameOne}
+            src={imageOne.url}
+            alt={imageOne.alt}
           />
         </Flex>
       </Box>
@@ -43,14 +49,14 @@ function SectionThree({
       >
         <Box paddingRight={6}>
           <Image
-            src={imagePathTwo}
-            alt={imageNameTwo}
+            src={imageTwo.url}
+            alt={imageTwo.alt}
           />
         </Box>
         <Box paddingLeft={6}>
           <Image
-            src={imagePathThree}
-            alt={imageNameThree}
+            src={imageThree.url}
+            alt={imageThree.alt}
           />
         </Box>
       </Flex>

@@ -1,26 +1,33 @@
 import { Box, Flex, Image, Text } from "@chakra-ui/react";
 
-interface SectionProps {
-  imagePathOne: string;
-  imagePathTwo: string;
-  imagePathThree: string;
-  imageNameOne: string;
-  imageNameTwo: string;
-  imageNameThree: string;
-  imagePathLogo: string;
-  imageNameLogo: string;
+interface ImageProps {
+  imageOne: {
+    id: number;
+    url: string;
+    alt: string;
+  },
+  imageTwo: {
+    id: number;
+    url: string;
+    alt: string;
+  },
+  imageThree: {
+    id: number;
+    url: string;
+    alt: string;
+  },
+  imageLogo: {
+    url: string;
+    alt: string
+  };
 }
 
 function SectionFour({
-  imagePathOne,
-  imagePathTwo,
-  imagePathThree,
-  imageNameOne,
-  imageNameTwo,
-  imageNameThree,
-  imagePathLogo,
-  imageNameLogo
-}: SectionProps) {
+  imageOne,
+  imageTwo,
+  imageThree,
+  imageLogo
+}: ImageProps) {
   return (
     <>
       <Box as="section">
@@ -31,7 +38,7 @@ function SectionFour({
           flexDir="column"
           paddingBottom={10}
         >
-          <Image src={imagePathOne} alt={imageNameOne} />
+          <Image src={imageOne.url} alt={imageOne.alt} />
         </Flex>
       </Box>
 
@@ -43,10 +50,10 @@ function SectionFour({
         backgroundColor="#D9D9D9"
       >
         <Box paddingRight={6}>
-          <Image src={imagePathTwo} alt={imageNameTwo} />
+          <Image src={imageTwo.url} alt={imageTwo.alt} />
         </Box>
         <Box paddingLeft={6}>
-          <Image src={imagePathThree} alt={imageNameThree} />
+          <Image src={imageThree.url} alt={imageThree.alt} />
         </Box>
       </Flex>
 
@@ -62,8 +69,8 @@ function SectionFour({
         <Box w="500px">
           <Flex justifyContent="center" alignItems="center">
             <img
-              src={imagePathLogo}
-              alt={imageNameLogo}
+              src={imageLogo.url}
+              alt={imageLogo.alt}
             />
           </Flex>
         </Box>

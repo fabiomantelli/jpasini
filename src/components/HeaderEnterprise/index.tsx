@@ -8,9 +8,14 @@ interface HeaderEnterpriseProps {
   floors: string;
   status: string;
   typeOfEnterprise: string;
-  urlLogo: string;
+  imageLogo: LogoProps;
   mainTitle: string;
   mainSubTitle: string;
+}
+
+interface LogoProps {
+  url: string;
+  alt: string;
 }
 
 function HeaderEnterprise({
@@ -20,7 +25,7 @@ function HeaderEnterprise({
   location,
   floors,
   status,
-  urlLogo,
+  imageLogo,
   mainTitle,
   mainSubTitle,
 }: HeaderEnterpriseProps) {
@@ -76,8 +81,8 @@ function HeaderEnterprise({
       </Flex>
       <Flex position="absolute" right={70} top={150} justifyContent="flex-end">
         <img
-          src={urlLogo}
-          alt="Antônio Emílio"
+          src={imageLogo.url}
+          alt={imageLogo.alt}
         />
       </Flex>
 

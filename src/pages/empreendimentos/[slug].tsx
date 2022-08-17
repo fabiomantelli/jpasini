@@ -15,15 +15,27 @@ interface EnterpriseProps {
       mainDescription: string;
       secondaryDescription: string;
       url: string;
-      urlLogo: string;
+      imageLogo: ImageProps;
       mainTitle: string;
       mainSubTitle: string;
       path: string;
       logoColor: string;
       textColor: string;
       colorMenu: string;
+      images: [
+        {
+          id: number;
+          url: string;
+          alt: string;
+        }
+      ];
     }
   ];
+}
+
+interface ImageProps {
+  url: string;
+  alt: string;
 }
 
 import { enterprisesData } from "../../data/enterprises";
@@ -39,94 +51,79 @@ function Empreendimentos({ enterprise }: EnterpriseProps) {
       <Box margin="0 auto" backgroundColor="#D9D9D9" paddingBottom={10}>
         <Header logoColor="green" colorMenu={enterprise[0].colorMenu} />
         <Menu logoColor="green" />
-        <HeaderEnterprise 
+        <HeaderEnterprise
           date={Number(enterprise[0].date)}
           enterpriseName={enterprise[0].name}
           typeOfEnterprise={enterprise[0].typeOfEnterprise}
           location={enterprise[0].location}
           floors={enterprise[0].floors}
           status={enterprise[0].status}
-          urlLogo={enterprise[0].urlLogo}
+          imageLogo={enterprise[0].imageLogo}
           mainTitle={enterprise[0].mainTitle}
           mainSubTitle={enterprise[0].mainSubTitle}
         />
       </Box>
 
-      <SectionOne />
-      <SectionTwo
-        imagePathOne={"../assets/antonioemilio/image1.webp"}
+      <SectionOne
+        imagePathOne={"../assets/antonioemilio/antonio-party-room-1.webp"}
         imageNameOne={"Antônio Emílio"}
-        imagePathTwo={"../assets/antonioemilio/image2.webp"}
-        imageNameTwo={"Antônio Emílio"}
-        imagePathThree={"../assets/antonioemilio/image3.webp"}
-        imageNameThree={"Antônio Emílio"}
         textDescription={
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
       />
+
+      <SectionTwo
+        imageOne={enterprise[0].images.find((image) => image.id == 1)!}
+        imageTwo={enterprise[0].images.find((image) => image.id == 2)!}
+        imageThree={enterprise[0].images.find((image) => image.id == 3)!}
+        textDescription={
+          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
+        }
+      />
+
       <SectionThree
-        imagePathOne={"../assets/antonioemilio/image4.webp"}
-        imageNameOne={"Antônio Emílio"}
-        imagePathTwo={"../assets/antonioemilio/image5.webp"}
-        imageNameTwo={"Antônio Emílio"}
-        imagePathThree={"../assets/antonioemilio/image6.webp"}
-        imageNameThree={"Antônio Emílio"}
+        imageOne={enterprise[0].images.find((image) => image.id == 4)!}
+        imageTwo={enterprise[0].images.find((image) => image.id == 5)!}
+        imageThree={enterprise[0].images.find((image) => image.id == 6)!}
       />
+
       <SectionFour
-        imagePathOne={"../assets/antonioemilio/image7.webp"}
-        imageNameOne={"Antônio Emílio"}
-        imagePathTwo={"../assets/antonioemilio/image8.webp"}
-        imageNameTwo={"Antônio Emílio"}
-        imagePathThree={"../assets/antonioemilio/image9.webp"}
-        imageNameThree={"Antônio Emílio"}
-        imagePathLogo={"../assets/antonioemilio/antonio-emilio-logo.svg"}
-        imageNameLogo={"Antônio Emílio"}
+        imageOne={enterprise[0].images.find((image) => image.id == 7)!}
+        imageTwo={enterprise[0].images.find((image) => image.id == 8)!}
+        imageThree={enterprise[0].images.find((image) => image.id == 9)!}
+        imageLogo={enterprise[0].imageLogo}
       />
 
       <SectionTwo
-        imagePathOne={"../assets/antonioemilio/image10.webp"}
-        imageNameOne={"Antônio Emílio"}
-        imagePathTwo={"../assets/antonioemilio/image11.webp"}
-        imageNameTwo={"Antônio Emílio"}
-        imagePathThree={"../assets/antonioemilio/image12.webp"}
-        imageNameThree={"Antônio Emílio"}
+        imageOne={enterprise[0].images.find((image) => image.id == 10)!}
+        imageTwo={enterprise[0].images.find((image) => image.id == 11)!}
+        imageThree={enterprise[0].images.find((image) => image.id == 12)!}
         textDescription={
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
       />
 
       <SectionFour
-        imagePathOne={"../assets/antonioemilio/image13.webp"}
-        imageNameOne={"Antônio Emílio"}
-        imagePathTwo={"../assets/antonioemilio/image14.webp"}
-        imageNameTwo={"Antônio Emílio"}
-        imagePathThree={"../assets/antonioemilio/image15.webp"}
-        imageNameThree={"Antônio Emílio"}
-        imagePathLogo={"../assets/antonioemilio/antonio-emilio-logo.svg"}
-        imageNameLogo={"Antônio Emílio"}
+        imageOne={enterprise[0].images.find((image) => image.id == 13)!}
+        imageTwo={enterprise[0].images.find((image) => image.id == 14)!}
+        imageThree={enterprise[0].images.find((image) => image.id == 15)!}
+        imageLogo={enterprise[0].imageLogo}
       />
 
       <SectionTwo
-        imagePathOne={"../assets/antonioemilio/image16.webp"}
-        imageNameOne={"Antônio Emílio"}
-        imagePathTwo={"../assets/antonioemilio/image17.webp"}
-        imageNameTwo={"Antônio Emílio"}
-        imagePathThree={"../assets/antonioemilio/image18.webp"}
-        imageNameThree={"Antônio Emílio"}
+        imageOne={enterprise[0].images.find((image) => image.id == 16)!}
+        imageTwo={enterprise[0].images.find((image) => image.id == 17)!}
+        imageThree={enterprise[0].images.find((image) => image.id == 18)!}
         textDescription={
           "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
         }
       />
 
       <SectionFour
-        imagePathOne={"../assets/antonioemilio/image19.webp"}
-        imageNameOne={"Antônio Emílio"}
-        imagePathTwo={"../assets/antonioemilio/image20.webp"}
-        imageNameTwo={"Antônio Emílio"}
-        imagePathThree={"../assets/antonioemilio/image21.webp"}
-        imageNameThree={"Antônio Emílio"}
-        imagePathLogo={"../assets/antonioemilio/antonio-emilio-logo.svg"}
-        imageNameLogo={"Antônio Emílio"}
+        imageOne={enterprise[0].images.find((image) => image.id == 19)!}
+        imageTwo={enterprise[0].images.find((image) => image.id == 20)!}
+        imageThree={enterprise[0].images.find((image) => image.id == 21)!}
+        imageLogo={enterprise[0].imageLogo}
       />
     </>
   );

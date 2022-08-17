@@ -1,25 +1,26 @@
 import { Flex, Box, Image, Text } from "@chakra-ui/react";
 import { RiFacebookBoxFill, RiLinkedinBoxFill } from "react-icons/ri";
 
-interface SectionProps {
-  imagePathOne: string;
-  imagePathTwo: string;
-  imagePathThree: string;
-  imageNameOne: string;
-  imageNameTwo: string;
-  imageNameThree: string;
+interface ImageProps {
+  imageOne: {
+    id: number;
+    url: string;
+    alt: string;
+  };
+  imageTwo: {
+    id: number;
+    url: string;
+    alt: string;
+  };
+  imageThree: {
+    id: number;
+    url: string;
+    alt: string;
+  };
   textDescription: string;
 }
 
-function SectionTwo({
-  imagePathOne,
-  imagePathTwo,
-  imagePathThree,
-  imageNameOne,
-  imageNameTwo,
-  imageNameThree,
-  textDescription,
-}: SectionProps) {
+function SectionTwo({ imageOne, imageTwo, imageThree, textDescription }: ImageProps) {
   return (
     <>
       <Box as="section">
@@ -30,7 +31,7 @@ function SectionTwo({
           flexDir="column"
           paddingBottom={10}
         >
-          <Image src={imagePathOne} alt={imageNameOne} />
+          <Image src={imageOne.url} alt={imageOne.alt} />
         </Flex>
       </Box>
 
@@ -42,10 +43,10 @@ function SectionTwo({
         backgroundColor="#D9D9D9"
       >
         <Box paddingRight={6}>
-          <Image src={imagePathTwo} alt={imageNameTwo} />
+          <Image src={imageTwo.url} alt={imageTwo.alt} />
         </Box>
         <Box paddingLeft={6}>
-          <Image src={imagePathThree} alt={imageNameTwo} />
+          <Image src={imageThree.url} alt={imageTwo.alt} />
         </Box>
       </Flex>
 
