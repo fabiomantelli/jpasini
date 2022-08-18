@@ -16,6 +16,7 @@ function Header(enterprise: LogoProps) {
   return (
     <Box
       padding='10px 80px 10px 5vw'
+      width='calc(100vw - 280px)'
     >
       <Flex
         alignItems="center"

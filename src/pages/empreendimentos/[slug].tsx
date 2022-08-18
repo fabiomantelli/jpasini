@@ -48,8 +48,16 @@ import HeaderEnterprise from "../../components/HeaderEnterprise";
 function Empreendimentos({ enterprise }: EnterpriseProps) {
   return (
     <>
-      <Box margin="0 auto" backgroundColor="#D9D9D9" paddingBottom={10}>
-        <Header logoColor="green" colorMenu={enterprise[0].colorMenu} />
+      <Box 
+        margin="0 auto" 
+        backgroundColor="#D9D9D9" 
+        paddingBottom={10}
+      >
+        <Header 
+          logoColor="green" 
+          colorMenu={enterprise[0].colorMenu}
+          isTheIndexPage={false}
+        />
         <Menu logoColor="green" />
         <HeaderEnterprise
           date={Number(enterprise[0].date)}
@@ -92,7 +100,8 @@ function Empreendimentos({ enterprise }: EnterpriseProps) {
         imageOne={enterprise[0].images.find((image) => image.id == 7)!}
         imageTwo={enterprise[0].images.find((image) => image.id == 8)!}
         imageThree={enterprise[0].images.find((image) => image.id == 9)!}
-        imageLogo={enterprise[0].imageLogo}
+        imageLogo={enterprise[0].imageLogo} 
+        side={0}
       />
 
       <SectionTwo
@@ -110,6 +119,7 @@ function Empreendimentos({ enterprise }: EnterpriseProps) {
         imageTwo={enterprise[0].images.find((image) => image.id == 14)!}
         imageThree={enterprise[0].images.find((image) => image.id == 15)!}
         imageLogo={enterprise[0].imageLogo}
+        side={1}
       />
 
       <SectionTwo
@@ -127,6 +137,7 @@ function Empreendimentos({ enterprise }: EnterpriseProps) {
         imageTwo={enterprise[0].images.find((image) => image.id == 20)!}
         imageThree={enterprise[0].images.find((image) => image.id == 21)!}
         imageLogo={enterprise[0].imageLogo}
+        side={0}
       />
     </>
   );

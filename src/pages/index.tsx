@@ -25,6 +25,10 @@ interface EnterpriseProps {
   colorMenu: string;
 }
 
+interface IndexProps {
+  isTheIndexProps: boolean;
+}
+
 const Home: NextPage = () => {
   const enterpriseNext = enterprisesData.filter(
     (data, index) => index == 1);

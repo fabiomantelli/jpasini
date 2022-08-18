@@ -20,13 +20,15 @@ interface ImageProps {
     url: string;
     alt: string
   };
+  side: number;
 }
 
 function SectionFour({
   imageOne,
   imageTwo,
   imageThree,
-  imageLogo
+  imageLogo,
+  side
 }: ImageProps) {
   return (
     <>
@@ -66,7 +68,7 @@ function SectionFour({
         w="100%"
         padding="0 5vw"
       >
-        <Box w="500px">
+        <Box w="500px" order={side}>
           <Flex justifyContent="center" alignItems="center">
             <img
               src={imageLogo.url}
