@@ -18,9 +18,16 @@ interface ImageProps {
     alt: string;
   };
   textDescription: string;
+  side: number;
 }
 
-function SectionTwo({ imageOne, imageTwo, imageThree, textDescription }: ImageProps) {
+function SectionTwo({ 
+  imageOne, 
+  imageTwo, 
+  imageThree, 
+  textDescription,
+  side
+}: ImageProps) {
   return (
     <>
       <Box as="section">
@@ -59,7 +66,7 @@ function SectionTwo({ imageOne, imageTwo, imageThree, textDescription }: ImagePr
         w="100%"
         padding="0 5vw"
       >
-        <Box w="500px">
+        <Box w="500px" order={side}>
           <Flex justifyContent="center" alignItems="center">
             <Text>COMPARTILHAR</Text>
             <RiFacebookBoxFill size={20} />
