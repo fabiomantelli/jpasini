@@ -36,7 +36,7 @@ function SectionTwo({
           justifyContent="center"
           backgroundColor="#D9D9D9"
           flexDir="column"
-          paddingBottom={10}
+          padding={10}
         >
           <Image src={imageOne.url} alt={imageOne.alt} />
         </Flex>
@@ -44,9 +44,10 @@ function SectionTwo({
 
       <Flex
         as="section"
+        flexDir="row"
         alignItems="center"
         justifyContent="center"
-        paddingBottom={10}
+        padding='0 40px'
         backgroundColor="#D9D9D9"
       >
         <Box paddingRight={6}>

@@ -56,7 +56,6 @@ function Empreendimentos({ enterprise }: EnterpriseProps) {
         <Header 
           logoColor="green" 
           colorMenu={enterprise[0].colorMenu}
-          isTheIndexPage={false}
         />
         <Menu logoColor="green" />
         <HeaderEnterprise

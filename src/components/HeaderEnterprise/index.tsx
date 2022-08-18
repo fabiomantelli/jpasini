@@ -1,4 +1,4 @@
-import { Box, Flex, Text } from "@chakra-ui/react";
+import { Box, Flex, Text, Image } from "@chakra-ui/react";
 import { RiFacebookBoxFill, RiLinkedinBoxFill } from "react-icons/ri";
 
 interface HeaderEnterpriseProps {
@@ -30,28 +30,84 @@ function HeaderEnterprise({
   mainSubTitle,
 }: HeaderEnterpriseProps) {
   return (
-    <Box as="header">
-      <Flex padding="0 5vw" alignItems="center">
-        <Box w="15%" fontSize="md">
+    <Box as="header" paddingTop={10}>
+      <Flex
+        padding="0 5vw"
+        alignItems="center"
+        flexDir={["column", "column", "column", "column", "row", "row"]}
+      >
+        <Flex
+          w="15%"
+          fontSize="md"
+          order={[1, 1, 1, 1, 0, 0]}
+          justifyContent="center"
+          paddingBottom={["40px", "40px", "40px", "40px", 0, 0]}
+        >
           <Text color="gray.500">{date}</Text>
-        </Box>
+        </Flex>
         <Box w="45%">
-          <Text fontSize="5xl" fontWeight="medium">
+          <Text
+            fontSize={["3xl", "3xl", "3xl", "5xl", "5xl", "5xl"]}
+            fontWeight="medium"
+            textAlign={[
+              "center",
+              "center",
+              "center",
+              "center",
+              "start",
+              "start",
+            ]}
+          >
             {enterpriseName}
           </Text>
         </Box>
       </Flex>
 
-      <Flex>
-        <Box paddingLeft="18.4%">
-          <Flex>
-            <Box width="12vw">
+      <Flex
+        justifyContent={[
+          "center",
+          "center",
+          "center",
+          "center",
+          "flex-start",
+          "flex-start",
+        ]}
+      >
+        <Box paddingLeft={[0, 0, 0, 0, "18.4%", "18.4%"]}>
+          <Flex
+            flexDir={["column", "column", "column", "column", "row", "row"]}
+          >
+            <Box
+              width={["auto", "auto", "auto", "auto", "12vw", "12vw"]}
+              textAlign={[
+                "center",
+                "center",
+                "center",
+                "center",
+                "start",
+                "start",
+              ]}
+            >
               <Text fontSize="xs">TIPO</Text>
-              <Text fontSize="sm" color="gray.500">
+              <Text
+                fontSize="sm"
+                color="gray.500"
+                paddingBottom={["10px", "10px", "10px", "10px", 0, 0]}
+              >
                 {typeOfEnterprise}
               </Text>
             </Box>
-            <Box>
+            <Box
+              width={["auto", "auto", "auto", "auto", "12vw", "12vw"]}
+              textAlign={[
+                "center",
+                "center",
+                "center",
+                "center",
+                "start",
+                "start",
+              ]}
+            >
               <Text fontSize="xs">LOCALIZAÇÃO</Text>
               <Text fontSize="sm" color="gray.500">
                 {location}
@@ -61,16 +117,51 @@ function HeaderEnterprise({
         </Box>
       </Flex>
 
-      <Flex paddingTop="20px">
-        <Box paddingLeft="18.4%">
-          <Flex>
-            <Box width="12vw">
+      <Flex
+        paddingTop="20px"
+        justifyContent={[
+          "center",
+          "center",
+          "center",
+          "center",
+          "flex-start",
+          "flex-start",
+        ]}
+      >
+        <Box paddingLeft={[0, 0, 0, 0, "18.4%", "18.4%"]}>
+          <Flex
+            flexDir={["column", "column", "column", "column", "row", "row"]}
+          >
+            <Box
+              width="12vw"
+              textAlign={[
+                "center",
+                "center",
+                "center",
+                "center",
+                "start",
+                "start",
+              ]}
+            >
               <Text fontSize="xs">ANDARES</Text>
-              <Text fontSize="sm" color="gray.500">
+              <Text
+                fontSize="sm"
+                color="gray.500"
+                paddingBottom={["10px", "10px", "10px", "10px", 0, 0]}
+              >
                 {floors}
               </Text>
             </Box>
-            <Box>
+            <Box
+              textAlign={[
+                "center",
+                "center",
+                "center",
+                "center",
+                "start",
+                "start",
+              ]}
+            >
               <Text fontSize="xs">STATUS</Text>
               <Text fontSize="sm" color="gray.500">
                 {status}
@@ -80,29 +171,76 @@ function HeaderEnterprise({
         </Box>
       </Flex>
       <Flex position="absolute" right={70} top={150} justifyContent="flex-end">
-        <img
+        <Image
           src={imageLogo.url}
           alt={imageLogo.alt}
+          width={["60%", "60%", "60%", "60%", "80%", "100%"]}
+          display={[
+            "none",
+            "none",
+            "none",
+            "none",
+            "inline-block",
+            "inline-block",
+          ]}
         />
       </Flex>
 
-      <Flex paddingTop="50px">
-        <Box paddingLeft="18.4%" width="59%">
+      <Flex
+        paddingTop="50px"
+        paddingLeft={[0, 0, 0, 0, "18.4%", "18.4%"]}
+        flexDir={["column", "column", "column", "column", "row", "row"]}
+        alignItems="center"
+      >
+        <Box width="59%">
           <Box>
             <Box>
-              <Text fontSize="lg" fontWeight="medium">
+              <Text
+                fontSize="lg"
+                fontWeight="medium"
+                textAlign={[
+                  "center",
+                  "center",
+                  "center",
+                  "center",
+                  "start",
+                  "start",
+                ]}
+              >
                 {mainTitle}
               </Text>
             </Box>
             <Box paddingTop="10px">
-              <Text as="p" fontWeight="md" color="gray.500">
+              <Text
+                as="p"
+                fontWeight="md"
+                color="gray.500"
+                textAlign={[
+                  "center",
+                  "center",
+                  "center",
+                  "center",
+                  "start",
+                  "start",
+                ]}
+              >
                 {mainSubTitle}
               </Text>
             </Box>
           </Box>
         </Box>
         <Box w="36%">
-          <Flex justifyContent="flex-end" alignItems="center">
+          <Flex
+            justifyContent={[
+              "center",
+              "center",
+              "center",
+              "center",
+              "flex-end",
+              "flex-end",
+            ]}
+            paddingTop={10}
+          >
             <Text>COMPARTILHAR</Text>
             <RiFacebookBoxFill size={20} />
             <RiLinkedinBoxFill size={20} />

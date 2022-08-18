@@ -31,7 +31,7 @@ function SectionThree({
           justifyContent="center"
           backgroundColor="#D9D9D9"
           flexDir="column"
-          paddingBottom={10}
+          padding={10}
         >
           <Image
             src={imageOne.url}
@@ -44,7 +44,7 @@ function SectionThree({
         as="section"
         alignItems="center"
         justifyContent="center"
-        paddingBottom={20}
+        padding='0 40px'
         backgroundColor="#D9D9D9"
       >
         <Box paddingRight={6}>
@@ -68,10 +68,9 @@ function SectionThree({
         justifyContent="center"
         backgroundColor="#D9D9D9"
         w="100%"
-        paddingBottom={20}
       >
         <Box>
-          <Text as="p" w="800px" lineHeight="25px">
+          <Text as="p" w="800px" lineHeight="25px" paddingTop={10}>
             RESPONSÁVEIS: <br />
             PROJETO ARQUITETÔNICO: Arq. Ana Cláudia Pasini – CAU/SC nº A 92577-2{" "}
             <br />
