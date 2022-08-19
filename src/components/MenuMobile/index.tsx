@@ -15,19 +15,26 @@ function MenuMobile({ menuIsVisible, setMenuIsVisible, logoColor }: MenuProps) {
       position="absolute"
       right={0}
       top={0}
-      transition='width 0.4s, height 0.4s'
-      willChange='width, height'
+      transition="width 0.4s, height 0.4s, outline 0.4s"
+      willChange="width, height"
       height={menuIsVisible ? "calc(100% - 20px)" : "60px"}
       width={
         menuIsVisible
-          ? ["calc(100% - 20px)", "calc(100% - 20px)", "calc(100% - 20px)", "calc(100% - 20px)", "calc(100% - 20px)"]
+          ? [
+              "calc(100% - 20px)",
+              "calc(100% - 20px)",
+              "calc(100% - 20px)",
+              "calc(100% - 20px)",
+              "calc(100% - 20px)",
+            ]
           : ["45vw", "45vw", "45vw", "260px", "260px"]
       }
-      margin='10px'
+      margin="10px"
       padding="5px"
       alignItems="center"
       backgroundColor="green.500"
       zIndex={5}
+      outline={menuIsVisible ? "10px solid white" : 'none'}
       background={
         menuIsVisible
           ? "rgba(46, 76, 70, 0.95)"
