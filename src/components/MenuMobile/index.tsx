@@ -22,8 +22,9 @@ function MenuMobile({ menuIsVisible, setMenuIsVisible, logoColor }: MenuProps) {
           ? ["100%", "100%", "100%", "100%", "100%"]
           : ["45vw", "45vw", "45vw", "260px", "260px"]
       }
-      margin={menuIsVisible ? 0 : "10px 10px 0 0"}
+      margin={menuIsVisible ? 0 : '10px'}
       padding="5px"
+      border={menuIsVisible ? '10px solid black' : 0}
       alignItems="center"
       backgroundColor="green.500"
       zIndex={5}
@@ -47,8 +48,8 @@ function MenuMobile({ menuIsVisible, setMenuIsVisible, logoColor }: MenuProps) {
       </Text>
       <Box
         position={menuIsVisible ? "fixed" : "static"}
-        right="10px"
-        top="10px"
+        right="5px"
+        top="5px"
         onClick={
           menuIsVisible
             ? () => setMenuIsVisible(false)
@@ -57,7 +58,7 @@ function MenuMobile({ menuIsVisible, setMenuIsVisible, logoColor }: MenuProps) {
       >
         <Hamburger
           color="white"
-          size={40}
+          size={30}
           toggled={menuIsVisible}
           toggle={setMenuIsVisible}
         />
