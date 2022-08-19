@@ -36,11 +36,7 @@ function MenuMobile({ menuIsVisible, setMenuIsVisible, logoColor }: MenuProps) {
       zIndex={5}
       outline={menuIsVisible ? "10px solid var(--chakra-colors-gray-500)" : 'none'}
       background={
-        menuIsVisible
-          ? "rgba(46, 76, 70, 0.95)"
-          : logoColor == "white"
-          ? "black"
-          : "green.500"
+        menuIsVisible && logoColor == 'green' ? "rgba(46, 76, 70, 0.95)" : logoColor == 'white' ? "black" :  "green.500"
       }
       justifyContent="space-evenly"
       backdropFilter={menuIsVisible ? "blur(2px)" : "none"}
