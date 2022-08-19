@@ -127,7 +127,7 @@ function SectionFour({
       >
         <Box w="500px" order={side} padding={5}>
           <Flex justifyContent="center" alignItems="center">
-            <img
+            <Image
               src={imageLogo.url}
               alt={imageLogo.alt}
             />
