@@ -244,7 +244,7 @@ export const enterprisesData = [
     mainTitle: "Prepare-se para viver com conforto no litoral catarinense.",
     mainSubTitle:
       "São 46 apartamentos de 2 quartos, sendo 1 suíte. Sacada com churrasqueira a carvão e bancada de granito. Possui 1 vaga de garagem, salão de festas, 2 elevadores, guarita, segurança e serviço de TV.",
-    path: "antonio-emilio",
+    path: "residencial-viena",
     logoColor: "green",
     textColor: "white",
     colorMenu: "green",
@@ -470,7 +470,7 @@ export const enterprisesData = [
     mainTitle: "Prepare-se para viver com conforto no litoral catarinense.",
     mainSubTitle:
       "São 46 apartamentos de 2 quartos, sendo 1 suíte. Sacada com churrasqueira a carvão e bancada de granito. Possui 1 vaga de garagem, salão de festas, 2 elevadores, guarita, segurança e serviço de TV.",
-    path: "antonio-emilio",
+    path: "internacional",
     logoColor: "white",
     textColor: "white",
     colorMenu: "green",
