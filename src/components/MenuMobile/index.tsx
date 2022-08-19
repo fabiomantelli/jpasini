@@ -34,7 +34,7 @@ function MenuMobile({ menuIsVisible, setMenuIsVisible, logoColor }: MenuProps) {
       alignItems="center"
       backgroundColor="green.500"
       zIndex={5}
-      outline={menuIsVisible ? "10px solid white" : 'none'}
+      outline={menuIsVisible ? "10px solid var(--chakra-colors-gray-500)" : 'none'}
       background={
         menuIsVisible
           ? "rgba(46, 76, 70, 0.95)"
