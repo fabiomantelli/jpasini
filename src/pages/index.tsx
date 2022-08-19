@@ -31,7 +31,7 @@ interface IndexProps {
 }
 
 const Home: NextPage = () => {
-  const [menuIsVisible, setMenuIsVisible] = useState(true);
+  const [menuIsVisible, setMenuIsVisible] = useState(false);
   const enterpriseNext = enterprisesData.filter(
     (data, index) => index == 1);
 
