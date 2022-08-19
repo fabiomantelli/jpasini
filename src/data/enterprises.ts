@@ -247,7 +247,7 @@ export const enterprisesData = [
     path: "antonio-emilio",
     logoColor: "green",
     textColor: "white",
-    colorMenu: "white",
+    colorMenu: "green",
     images: [
       {
         id: 1,
@@ -473,7 +473,7 @@ export const enterprisesData = [
     path: "antonio-emilio",
     logoColor: "white",
     textColor: "white",
-    colorMenu: "white",
+    colorMenu: "green",
     images: [
       {
         id: 1,
