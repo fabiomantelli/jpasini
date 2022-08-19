@@ -15,7 +15,6 @@ function SectionOne({
     <Flex
       as="section"
       alignItems="center"
-      justifyContent="center"
       backgroundColor="#D9D9D9"
       flexDir="column"
     >
@@ -26,7 +25,14 @@ function SectionOne({
         w="100vw"
       />
 
-      <Text as="p" w="800px" lineHeight="25px" padding="70px 0">
+      <Text 
+        as="p" 
+        maxW="800px" 
+        lineHeight="25px" 
+        padding="70px 40px"
+        fontSize={['xs', 'xs', 'sm', 'sm', 'md', 'md']}
+        textAlign={['center', 'center', 'center', 'center', 'start', 'start']}
+      >
         {textDescription}
       </Text>
     </Flex>

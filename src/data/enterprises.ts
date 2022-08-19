@@ -29,6 +29,11 @@ export const enterprisesData = [
         alt: "Antônio Emílio",
       },
       {
+        id: 101,
+        url: "../assets/antonioemilio/image01-mobile.webp",
+        alt: "Antônio Emílio",
+      },
+      {
         id: 2,
         url: "../assets/antonioemilio/image02.webp",
         alt: "Antônio Emílio",
@@ -39,6 +44,16 @@ export const enterprisesData = [
         alt: "Antônio Emílio",
       },
       {
+        id: 3,
+        url: "../assets/antonioemilio/image03.webp",
+        alt: "Antônio Emílio",
+      },
+      {
+        id: 301,
+        url: "../assets/antonioemilio/image03-mobile.webp",
+        alt: "Antônio Emílio Mobile",
+      },
+      {
         id: 4,
         url: "../assets/antonioemilio/image04.webp",
         alt: "Antônio Emílio",
@@ -46,6 +61,11 @@ export const enterprisesData = [
       {
         id: 5,
         url: "../assets/antonioemilio/image05.webp",
+        alt: "Antônio Emílio",
+      },
+      {
+        id: 501,
+        url: "../assets/antonioemilio/image05-mobile.webp",
         alt: "Antônio Emílio",
       },
       {
@@ -59,8 +79,18 @@ export const enterprisesData = [
         alt: "Antônio Emílio",
       },
       {
+        id: 701,
+        url: "../assets/antonioemilio/image07-mobile.webp",
+        alt: "Antônio Emílio",
+      },
+      {
         id: 8,
         url: "../assets/antonioemilio/image08.webp",
+        alt: "Antônio Emílio",
+      },
+      {
+        id: 801,
+        url: "../assets/antonioemilio/image08-mobile.webp",
         alt: "Antônio Emílio",
       },
       {
@@ -69,8 +99,18 @@ export const enterprisesData = [
         alt: "Antônio Emílio",
       },
       {
+        id: 901,
+        url: "../assets/antonioemilio/image09-mobile.webp",
+        alt: "Antônio Emílio",
+      },
+      {
         id: 10,
         url: "../assets/antonioemilio/image10.webp",
+        alt: "Antônio Emílio",
+      },
+      {
+        id: 1001,
+        url: "../assets/antonioemilio/image10-mobile.webp",
         alt: "Antônio Emílio",
       },
       {
@@ -79,8 +119,18 @@ export const enterprisesData = [
         alt: "Antônio Emílio",
       },
       {
+        id: 1101,
+        url: "../assets/antonioemilio/image11-mobile.webp",
+        alt: "Antônio Emílio",
+      },
+      {
         id: 12,
         url: "../assets/antonioemilio/image12.webp",
+        alt: "Antônio Emílio",
+      },
+      {
+        id: 1201,
+        url: "../assets/antonioemilio/image12-mobile.webp",
         alt: "Antônio Emílio",
       },
       {
@@ -89,8 +139,18 @@ export const enterprisesData = [
         alt: "Antônio Emílio",
       },
       {
+        id: 1301,
+        url: "../assets/antonioemilio/image13-mobile.webp",
+        alt: "Antônio Emílio",
+      },
+      {
         id: 14,
         url: "../assets/antonioemilio/image14.webp",
+        alt: "Antônio Emílio",
+      },
+      {
+        id: 1401,
+        url: "../assets/antonioemilio/image14-mobile.webp",
         alt: "Antônio Emílio",
       },
       {
@@ -99,8 +159,18 @@ export const enterprisesData = [
         alt: "Antônio Emílio",
       },
       {
+        id: 1501,
+        url: "../assets/antonioemilio/image15-mobile.webp",
+        alt: "Antônio Emílio",
+      },
+      {
         id: 16,
         url: "../assets/antonioemilio/image16.webp",
+        alt: "Antônio Emílio",
+      },
+      {
+        id: 1601,
+        url: "../assets/antonioemilio/image16-mobile.webp",
         alt: "Antônio Emílio",
       },
       {
@@ -109,8 +179,18 @@ export const enterprisesData = [
         alt: "Antônio Emílio",
       },
       {
+        id: 1701,
+        url: "../assets/antonioemilio/image17-mobile.webp",
+        alt: "Antônio Emílio",
+      },
+      {
         id: 18,
         url: "../assets/antonioemilio/image18.webp",
+        alt: "Antônio Emílio",
+      },
+      {
+        id: 1801,
+        url: "../assets/antonioemilio/image18-mobile.webp",
         alt: "Antônio Emílio",
       },
       {
@@ -119,13 +199,28 @@ export const enterprisesData = [
         alt: "Antônio Emílio",
       },
       {
+        id: 1901,
+        url: "../assets/antonioemilio/image19-mobile.webp",
+        alt: "Antônio Emílio",
+      },
+      {
         id: 20,
         url: "../assets/antonioemilio/image20.webp",
         alt: "Antônio Emílio",
       },
       {
+        id: 2001,
+        url: "../assets/antonioemilio/image20-mobile.webp",
+        alt: "Antônio Emílio",
+      },
+      {
         id: 21,
         url: "../assets/antonioemilio/image21.webp",
+        alt: "Antônio Emílio",
+      },
+      {
+        id: 2101,
+        url: "../assets/antonioemilio/image21-mobile.webp",
         alt: "Antônio Emílio",
       },
     ],
