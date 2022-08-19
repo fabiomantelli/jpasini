@@ -125,7 +125,7 @@ function SectionFour({
         justifyContent="center"
         backgroundColor="#D9D9D9"
       >
-        <Box w="500px" order={side} padding={5}>
+        <Box maxW="500px" order={side} padding={5}>
           <Flex justifyContent="center" alignItems="center">
             <Image
               src={imageLogo.url}
@@ -136,11 +136,13 @@ function SectionFour({
         <Box 
           marginLeft={[0, 0, 0, 0, '4vw', '4vw']} 
           maxW="555px"
+          padding="0 5vw"
         >
           <Text 
             as="p" 
             lineHeight="25px"
             padding="40px 0"
+            fontSize={['xs', 'xs', 'sm', 'sm', 'md', 'md']}
             textAlign={['center', 'center', 'center', 'center', 'start', 'start']}
           >
             Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do

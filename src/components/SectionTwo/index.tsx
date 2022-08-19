@@ -124,7 +124,7 @@ function SectionTwo({
         w="100%"
         padding="20px 5vw"
       >
-        <Box w="500px" order={side} padding={5}>
+        <Box maxW="500px" order={side} padding={5}>
           <Flex justifyContent="center" alignItems="center">
             <Text>COMPARTILHAR</Text>
             <RiFacebookBoxFill size={20} />
@@ -132,7 +132,7 @@ function SectionTwo({
           </Flex>
         </Box>
         <Box
-          w="500px"
+          maxW="500px"
           marginLeft={[0, 0, 0, 0, '4vw', '4vw']}
           paddingBottom={5}
         >
