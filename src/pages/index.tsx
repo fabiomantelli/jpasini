@@ -5,7 +5,6 @@ import { Box, Flex, keyframes } from "@chakra-ui/react";
 import Header from "../components/Header";
 import MainSection from "../components/MainSection";
 import RightSide from "../components/RightSide";
-import Menu from '../components/Menu'
 import Next from "../components/Next";
 
 import { enterprisesData } from "../data/enterprises"
