@@ -48,6 +48,7 @@ function SectionFour({
   imageLogo,
   side
 }: ImageProps) {
+  
   return (
     <>
       <Box as="section">

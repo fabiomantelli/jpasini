@@ -9,6 +9,7 @@ import Menu from '../components/Menu'
 import Next from "../components/Next";
 
 import { enterprisesData } from "../data/enterprises"
+import MenuMobile from "../components/MenuMobile";
 
 const fadeIn = keyframes`
   0% { opacity: 0.6; }
@@ -30,6 +31,7 @@ interface IndexProps {
 }
 
 const Home: NextPage = () => {
+  const [menuIsVisible, setMenuIsVisible] = useState(true);
   const enterpriseNext = enterprisesData.filter(
     (data, index) => index == 1);
 
@@ -103,7 +105,12 @@ const Home: NextPage = () => {
           logoColor={enterprise.logoColor}
           colorMenu={enterprise.colorMenu}
         />
-        <Menu logoColor={enterprise.logoColor} />
+        {/* <Menu logoColor={enterprise.logoColor} /> */}
+        <MenuMobile 
+        menuIsVisible={menuIsVisible}
+        setMenuIsVisible={setMenuIsVisible}
+        logoColor={enterprise.logoColor}
+      />
         <MainSection
           textColor={enterprise.textColor}
           count={count}
