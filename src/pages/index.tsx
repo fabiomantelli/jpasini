@@ -30,14 +30,14 @@ interface IndexProps {
 }
 
 const Home: NextPage = () => {
-  const [menuIsVisible, setMenuIsVisible] = useState(false);
   const enterpriseNext = enterprisesData.filter(
     (data, index) => index == 1);
-
-  const [enterprise, setEnterprise] = useState<EnterpriseProps>(enterprisesData[0]);
-  const [nextEnterprise, setNextEnterprise] = useState(enterpriseNext[0]);
-  const [count, setCount] = useState(1);
-
+    
+    const [menuIsVisible, setMenuIsVisible] = useState(false);
+    const [enterprise, setEnterprise] = useState<EnterpriseProps>(enterprisesData[0]);
+    const [nextEnterprise, setNextEnterprise] = useState(enterpriseNext[0]);
+    const [count, setCount] = useState(1);
+    
   function handleNextEnterprises() {
     if (count < Object.keys(enterprisesData).length) {
       const enterprise = enterprisesData.filter(

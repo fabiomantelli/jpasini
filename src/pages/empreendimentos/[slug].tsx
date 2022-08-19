@@ -1,7 +1,15 @@
+import { useState } from "react";
 import { Box } from "@chakra-ui/react";
 
+import SectionOne from "../../components/SectionOne";
+import SectionTwo from "../../components/SectionTwo";
+import SectionThree from "../../components/SectionThree";
+import SectionFour from "../../components/SectionFour";
+import HeaderEnterprise from "../../components/HeaderEnterprise";
+import MenuMobile from "../../components/MenuMobile";
 import Header from "../../components/Header";
-import Menu from "../../components/Menu";
+
+import { enterprisesData } from "../../data/enterprises";
 
 interface EnterpriseProps {
   enterprise: [
@@ -38,14 +46,9 @@ interface ImageProps {
   alt: string;
 }
 
-import { enterprisesData } from "../../data/enterprises";
-import SectionOne from "../../components/SectionOne";
-import SectionTwo from "../../components/SectionTwo";
-import SectionThree from "../../components/SectionThree";
-import SectionFour from "../../components/SectionFour";
-import HeaderEnterprise from "../../components/HeaderEnterprise";
-
 function Empreendimentos({ enterprise }: EnterpriseProps) {
+  const [menuIsVisible, setMenuIsVisible] = useState(false);
+  
   return (
     <>
       <Box
@@ -57,7 +60,11 @@ function Empreendimentos({ enterprise }: EnterpriseProps) {
           logoColor="green"
           colorMenu={enterprise[0].colorMenu}
         />
-        <Menu logoColor="green" />
+        <MenuMobile 
+          menuIsVisible={menuIsVisible}
+          setMenuIsVisible={setMenuIsVisible}
+          logoColor="green" 
+        />
         <HeaderEnterprise
           date={Number(enterprise[0].date)}
           enterpriseName={enterprise[0].name}
