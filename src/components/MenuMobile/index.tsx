@@ -15,18 +15,15 @@ function MenuMobile({ menuIsVisible, setMenuIsVisible, logoColor }: MenuProps) {
       position="absolute"
       right={0}
       top={0}
-      transitionDuration='0.4s'
-      transitionProperty='all'
-      transitionTimingFunction='linear'
-      height={menuIsVisible ? "100%" : "60px"}
+      transition='0.5s'
+      height={menuIsVisible ? "calc(100% - 20px)" : "60px"}
       width={
         menuIsVisible
-          ? ["100%", "100%", "100%", "100%", "100%"]
+          ? ["calc(100% - 20px)", "calc(100% - 20px)", "calc(100% - 20px)", "calc(100% - 20px)", "calc(100% - 20px)"]
           : ["45vw", "45vw", "45vw", "260px", "260px"]
       }
-      margin={menuIsVisible ? 0 : '10px'}
+      margin='10px'
       padding="5px"
-      border={menuIsVisible ? '10px solid black' : 0}
       alignItems="center"
       backgroundColor="green.500"
       zIndex={5}
@@ -50,8 +47,8 @@ function MenuMobile({ menuIsVisible, setMenuIsVisible, logoColor }: MenuProps) {
       </Text>
       <Box
         position={menuIsVisible ? "fixed" : "static"}
-        right="5px"
-        top="5px"
+        right="10px"
+        top="10px"
         onClick={
           menuIsVisible
             ? () => setMenuIsVisible(false)
