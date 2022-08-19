@@ -13,7 +13,8 @@ function MenuMobile({ menuIsVisible, setMenuIsVisible, logoColor }: MenuProps) {
  return (
   <Flex
    position='absolute'
-   transition='1s'
+   willChange='transform, box-shadow, z-index'
+   transition='0.5s'
    right={0}
    top={0}
    height={menuIsVisible ? '100%' : '60px'}
