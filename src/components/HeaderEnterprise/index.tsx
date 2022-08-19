@@ -133,7 +133,7 @@ function HeaderEnterprise({
             flexDir={["column", "column", "column", "column", "row", "row"]}
           >
             <Box
-              width="12vw"
+              width={['auto', 'auto', 'auto', 'auto', "12vw", "12vw"]}
               textAlign={[
                 "center",
                 "center",
