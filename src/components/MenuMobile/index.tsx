@@ -15,7 +15,7 @@ function MenuMobile({ menuIsVisible, setMenuIsVisible, logoColor }: MenuProps) {
       position="absolute"
       right={0}
       top={0}
-      transition="width 0.4s, height 0.4s, outline 0.4s"
+      transition="width 0.3s, height 0.3s, outline 0.3s"
       willChange="width, height"
       height={menuIsVisible ? "calc(100% - 20px)" : "60px"}
       width={
