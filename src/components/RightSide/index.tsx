@@ -39,6 +39,7 @@ function RightSide({ logoColor }: logoProps) {
           gap={5}
           paddingBottom={['40px', '40px', '40px', '40px', '0']}
           height={['auto', 'auto', 'auto', 'auto', '80px']}
+          zIndex={10}
         >
           <ListItem _hover={{ color: 'green.600', transition: '0.3s' }}>
             <Link href='https://www.instagram.com/jpasiniarquiteturaeengenharia/' target='_blank'>

@@ -5,6 +5,7 @@ import {
   ListItem,
   Flex,
   Spacer,
+  Image
 } from '@chakra-ui/react'
 
 interface LogoProps {
@@ -15,17 +16,20 @@ interface LogoProps {
 function Header(enterprise: LogoProps) {
   return (
     <Box
-      padding='10px 80px 10px 5vw'
-      width='calc(100vw - 280px)'
+      padding='10px 50px 10px 5vw'
+      width={['55vw','55vw','55vw', 'calc(100vw - 280px)', 'calc(100vw - 280px)']}
+      objectFit='cover'
     >
       <Flex
         alignItems="center"
         textDecor='none'
         height="60px"
-        justifyContent="space-evenly"
+        width='100%'
       >
         <Link href="/">
-          <img src={enterprise.logoColor == 'white' ? '../white-logo.svg' : '../logo.svg'} width='100%' height='100%' />
+          <Image 
+            src={enterprise.logoColor == 'white' ? '../white-logo.svg' : '../logo.svg'} 
+          />
         </Link>
         <Spacer />
         <List display={['none', 'none', 'none', 'flex', 'block']}>
