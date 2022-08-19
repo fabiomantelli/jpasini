@@ -38,7 +38,7 @@ function MenuMobile({ menuIsVisible, setMenuIsVisible, logoColor }: MenuProps) {
       background={
         menuIsVisible && logoColor == 'green' ? 
           "rgba(46, 76, 70, 0.95)" : menuIsVisible && logoColor == 'white' ? 
-          "rgba(0, 0, 0, 0.95)" : logoColor == 'white' ? 
+          "rgba(0, 0, 0, 0.85)" : logoColor == 'white' ? 
           "black" :  "green.500"
       }
      
