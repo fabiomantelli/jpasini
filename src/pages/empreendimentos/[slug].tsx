@@ -48,9 +48,17 @@ interface ImageProps {
 
 function Empreendimentos({ enterprise }: EnterpriseProps) {
   const [menuIsVisible, setMenuIsVisible] = useState(false);
-  
+
   return (
-    <>
+    <Box 
+      overflowY={menuIsVisible ? 'hidden' : 'visible'} 
+      height={menuIsVisible ? '100vh' : 'auto'}
+    >
+      <MenuMobile
+        menuIsVisible={menuIsVisible}
+        setMenuIsVisible={setMenuIsVisible}
+        logoColor="green"
+      />
       <Box
         margin="0 auto"
         backgroundColor="#D9D9D9"
@@ -60,11 +68,7 @@ function Empreendimentos({ enterprise }: EnterpriseProps) {
           logoColor="green"
           colorMenu={enterprise[0].colorMenu}
         />
-        <MenuMobile 
-          menuIsVisible={menuIsVisible}
-          setMenuIsVisible={setMenuIsVisible}
-          logoColor="green" 
-        />
+
         <HeaderEnterprise
           date={Number(enterprise[0].date)}
           enterpriseName={enterprise[0].name}
@@ -164,7 +168,7 @@ function Empreendimentos({ enterprise }: EnterpriseProps) {
         imageLogo={enterprise[0].imageLogo}
         side={0}
       />
-    </>
+    </Box>
   );
 }
 

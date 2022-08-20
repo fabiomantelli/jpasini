@@ -22,7 +22,7 @@ function MenuMobile({ menuIsVisible, setMenuIsVisible, logoColor }: MenuProps) {
         padding="5px"
         transition="width 0.3s, height 0.3s, outline 0.3s"
         willChange="width, height"
-        height={menuIsVisible ? "calc(100% - 20px)" : "60px"}
+        height={menuIsVisible ? "calc(100vh - 20px)" : "60px"}
         width={
           menuIsVisible
             ? [
@@ -55,7 +55,7 @@ function MenuMobile({ menuIsVisible, setMenuIsVisible, logoColor }: MenuProps) {
         </Text>
         <Box
           position={menuIsVisible ? "fixed" : "static"}
-          
+
           right="10px"
           top="10px"
           onClick={
@@ -69,13 +69,13 @@ function MenuMobile({ menuIsVisible, setMenuIsVisible, logoColor }: MenuProps) {
             size={30}
             toggled={menuIsVisible}
             toggle={setMenuIsVisible}
-           
+
           />
         </Box>
       </Flex>
 
       <Box>
-      <MenuMobileItems menuIsVisible={menuIsVisible}/>
+        <MenuMobileItems menuIsVisible={menuIsVisible} />
       </Box>
 
     </>
