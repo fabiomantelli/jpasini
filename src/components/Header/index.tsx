@@ -32,14 +32,14 @@ function Header(enterprise: LogoProps) {
           />
         </Link>
         <Spacer />
-        <List display={['none', 'none', 'none', 'flex', 'block']}>
+        <List display={['none', 'none', 'none', 'block', 'block']}>
           <Flex
             fontSize='sm'
+            textColor={enterprise.colorMenu == 'white' ? 'white' : 'black'}
           >
             <Link
               href="/empreendimentos/antonio-emilio"
               style={{ textDecoration: 'none' }}
-              textColor={enterprise.colorMenu == 'white' ? 'white' : 'black'}
               _hover={enterprise.logoColor == 'white' ? 
                 { color: 'gray.900', transition: '0.3s' } : 
                 { color: 'green.500', transition: '0.3s' }}
@@ -50,7 +50,6 @@ function Header(enterprise: LogoProps) {
             <Link
               href="/vendas"
               style={{ textDecoration: 'none' }}
-              textColor={enterprise.colorMenu == 'white' ? 'white' : 'black'}
               _hover={enterprise.logoColor == 'white' ? { color: 'gray.900', transition: '0.3s' } : { color: 'green.500', transition: '0.3s' }}
               paddingRight="50px"
             >
@@ -59,7 +58,6 @@ function Header(enterprise: LogoProps) {
             <Link
               href="/futuro"
               style={{ textDecoration: 'none' }}
-              textColor={enterprise.colorMenu == 'white' ? 'white' : 'black'}
               _hover={enterprise.logoColor == 'white' ? { color: 'gray.900', transition: '0.3s' } : { color: 'green.500', transition: '0.3s' }}
             >
               <ListItem>.Futuro</ListItem>

@@ -103,6 +103,7 @@ const Home: NextPage = () => {
         <Header
           logoColor={enterprise.logoColor}
           colorMenu={enterprise.colorMenu}
+          menuIsVisible={menuIsVisible}
         />
         <MenuMobile 
         menuIsVisible={menuIsVisible}
