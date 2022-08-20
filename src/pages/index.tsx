@@ -32,12 +32,12 @@ interface IndexProps {
 const Home: NextPage = () => {
   const enterpriseNext = enterprisesData.filter(
     (data, index) => index == 1);
-    
-    const [menuIsVisible, setMenuIsVisible] = useState(false);
-    const [enterprise, setEnterprise] = useState<EnterpriseProps>(enterprisesData[0]);
-    const [nextEnterprise, setNextEnterprise] = useState(enterpriseNext[0]);
-    const [count, setCount] = useState(1);
-    
+
+  const [menuIsVisible, setMenuIsVisible] = useState(false);
+  const [enterprise, setEnterprise] = useState<EnterpriseProps>(enterprisesData[0]);
+  const [nextEnterprise, setNextEnterprise] = useState(enterpriseNext[0]);
+  const [count, setCount] = useState(1);
+
   function handleNextEnterprises() {
     if (count < Object.keys(enterprisesData).length) {
       const enterprise = enterprisesData.filter(
@@ -92,6 +92,11 @@ const Home: NextPage = () => {
 
   return (
     <Flex>
+      <MenuMobile
+        menuIsVisible={menuIsVisible}
+        setMenuIsVisible={setMenuIsVisible}
+        logoColor={enterprise.logoColor}
+      />
       <Box
         key={enterprise.url}
         backgroundImage={enterprise.url}
@@ -104,11 +109,7 @@ const Home: NextPage = () => {
           logoColor={enterprise.logoColor}
           colorMenu={enterprise.colorMenu}
         />
-        <MenuMobile 
-        menuIsVisible={menuIsVisible}
-        setMenuIsVisible={setMenuIsVisible}
-        logoColor={enterprise.logoColor}
-      />
+
         <MainSection
           textColor={enterprise.textColor}
           count={count}
