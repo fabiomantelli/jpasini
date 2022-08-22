@@ -34,7 +34,8 @@ interface IndexProps {
 
 const Home: NextPage = () => {
   const handlers = useSwipeable({
-    onSwipedRight: (eventData) => handleNextEnterprises(),
+    onSwipedRight: (eventData) => handlePreviousClick(),
+    onSwipedLeft: (eventData) => handleNextEnterprises(),
     ...config,
   });
 
