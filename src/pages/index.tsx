@@ -100,7 +100,7 @@ const Home: NextPage = () => {
   }, [count]);
 
   return (
-    <Flex {...handlers}>
+    <Flex>
       <MenuMobile
         menuIsVisible={menuIsVisible}
         setMenuIsVisible={setMenuIsVisible}
@@ -113,6 +113,7 @@ const Home: NextPage = () => {
         backgroundSize="cover"
         width={['100vw', '100vw', '100vw', 'calc(100vw - 280px)']}
         height="100vh"
+        {...handlers}
       >
         <Header
           logoColor={enterprise.logoColor}
