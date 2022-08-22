@@ -11,6 +11,7 @@ import Next from "../components/Next";
 
 import { enterprisesData } from "../data/enterprises"
 import MenuMobile from "../components/MenuMobile";
+import config from "next/config";
 
 const fadeIn = keyframes`
   0% { opacity: 0.6; }
@@ -32,6 +33,11 @@ interface IndexProps {
 }
 
 const Home: NextPage = () => {
+  const handlers = useSwipeable({
+    onSwipedRight: (eventData) => handleNextEnterprises(),
+    ...config,
+  });
+
   const enterpriseNext = enterprisesData.filter(
     (data, index) => index == 1);
 
@@ -84,7 +90,6 @@ const Home: NextPage = () => {
     }
   }
 
-
   useEffect(() => {
     const intervalBetweenTransitions = setInterval(() => {
       handleNextEnterprises();
@@ -94,7 +99,7 @@ const Home: NextPage = () => {
   }, [count]);
 
   return (
-    <Flex>
+    <Flex {...handlers}>
       <MenuMobile
         menuIsVisible={menuIsVisible}
         setMenuIsVisible={setMenuIsVisible}
