@@ -1,4 +1,4 @@
-import { Box, Stack } from "@chakra-ui/react";
+import { Box, Button, Stack } from "@chakra-ui/react";
 import EmilioText from "../EmilioText";
 
 interface EnterpriseProps {
@@ -9,10 +9,21 @@ interface EnterpriseProps {
   secondaryDescription: string;
 }
 
-function MainSection({ textColor, count, name, mainDescription, secondaryDescription }: EnterpriseProps) {
+function MainSection({ 
+  textColor, 
+  count, name, 
+  mainDescription, 
+  secondaryDescription,
+}: EnterpriseProps) {
   return (
     <>
-      <Box width="80vw" display="flex" marginRight="auto" marginLeft="auto">
+      <Box 
+        width="80vw" 
+        display="flex" 
+        marginRight="auto" 
+        marginLeft="auto"
+       
+      >
         <Stack
           height={["70vh", "70vh", "70vh", "70vh", "auto"]}
           justifyContent={{ md: "initial", base: "center" }}

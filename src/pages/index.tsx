@@ -1,6 +1,6 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, TouchEvent } from "react";
 import type { NextPage } from "next";
-import { Box, Flex, keyframes } from "@chakra-ui/react";
+import { Box, Button, Flex, keyframes } from "@chakra-ui/react";
 
 import Header from "../components/Header";
 import MainSection from "../components/MainSection";
@@ -82,6 +82,12 @@ const Home: NextPage = () => {
     }
   }
 
+  function handleTouchEvent(e: TouchEvent<HTMLButtonElement>) {
+    e.preventDefault();
+    console.log(`deslizou!`)
+  }
+
+
   useEffect(() => {
     const intervalBetweenTransitions = setInterval(() => {
       handleNextEnterprises();
@@ -92,6 +98,7 @@ const Home: NextPage = () => {
 
   return (
     <Flex>
+      <Button onTouchStart={handleTouchEvent}>Teste</Button>
       <MenuMobile
         menuIsVisible={menuIsVisible}
         setMenuIsVisible={setMenuIsVisible}
