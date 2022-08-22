@@ -2,6 +2,8 @@ import { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import { Box, Flex, keyframes } from "@chakra-ui/react";
 
+import { useSwipeable } from "react-swipeable";
+
 import Header from "../components/Header";
 import MainSection from "../components/MainSection";
 import RightSide from "../components/RightSide";
