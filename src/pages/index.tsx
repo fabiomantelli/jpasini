@@ -1,4 +1,4 @@
-import { useEffect, useLayoutEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import type { NextPage } from "next";
 import { Box, Flex, keyframes } from "@chakra-ui/react";
 
@@ -46,6 +46,7 @@ const Home: NextPage = () => {
   const [enterprise, setEnterprise] = useState<EnterpriseProps>(enterprisesData[0]);
   const [nextEnterprise, setNextEnterprise] = useState(enterpriseNext[0]);
   const [count, setCount] = useState(1);
+
   const [, windowHeight] = useWindowSize();
 
   function handleNextEnterprises() {
@@ -101,7 +102,7 @@ const Home: NextPage = () => {
       window.addEventListener('resize', updateSize);
       updateSize();
       return () => window.removeEventListener('resize', updateSize);
-    }, []);
+    }, [size]);
     return size;
   }
 
