@@ -100,7 +100,7 @@ const Home: NextPage = () => {
   }, [count]);
 
   return (
-    <Flex>
+    <Flex width='100%'>
       <MenuMobile
         menuIsVisible={menuIsVisible}
         setMenuIsVisible={setMenuIsVisible}
