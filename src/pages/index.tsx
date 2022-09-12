@@ -94,7 +94,7 @@ const Home: NextPage = () => {
 
   function useWindowSize() {
     const [size, setSize] = useState([0, 0]);
-    useLayoutEffect(() => {
+    useEffect(() => {
       function updateSize() {
         setSize([window.innerWidth, window.innerHeight]);
       }
@@ -104,8 +104,6 @@ const Home: NextPage = () => {
     }, []);
     return size;
   }
-
-  useWindowSize();
 
   useEffect(() => {
     const intervalBetweenTransitions = setInterval(() => {
