@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect, useLayoutEffect, useState } from "react";
 import type { NextPage } from "next";
 import { Box, Flex, keyframes } from "@chakra-ui/react";
 
@@ -91,6 +91,21 @@ const Home: NextPage = () => {
     }
   }
 
+  function useWindowSize() {
+    const [size, setSize] = useState([0, 0]);
+    useLayoutEffect(() => {
+      function updateSize() {
+        setSize([window.innerWidth, window.innerHeight]);
+      }
+      window.addEventListener('resize', updateSize);
+      updateSize();
+      return () => window.removeEventListener('resize', updateSize);
+    }, []);
+    return size;
+  }
+
+  const [, windowHeight] = useWindowSize();
+
   useEffect(() => {
     const intervalBetweenTransitions = setInterval(() => {
       handleNextEnterprises();
@@ -100,7 +115,7 @@ const Home: NextPage = () => {
   }, [count]);
 
   return (
-    <Flex h='calc(100vh)'>
+    <Flex h={windowHeight}>
       <MenuMobile
         menuIsVisible={menuIsVisible}
         setMenuIsVisible={setMenuIsVisible}
