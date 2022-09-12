@@ -46,6 +46,7 @@ const Home: NextPage = () => {
   const [enterprise, setEnterprise] = useState<EnterpriseProps>(enterprisesData[0]);
   const [nextEnterprise, setNextEnterprise] = useState(enterpriseNext[0]);
   const [count, setCount] = useState(1);
+  const [, windowHeight] = useWindowSize();
 
   function handleNextEnterprises() {
     if (count < Object.keys(enterprisesData).length) {
@@ -104,7 +105,7 @@ const Home: NextPage = () => {
     return size;
   }
 
-  const [, windowHeight] = useWindowSize();
+  useWindowSize();
 
   useEffect(() => {
     const intervalBetweenTransitions = setInterval(() => {
