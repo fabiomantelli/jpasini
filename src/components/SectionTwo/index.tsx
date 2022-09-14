@@ -1,4 +1,4 @@
-import { Flex, Box, Image, Text } from "@chakra-ui/react";
+import { Flex, Box, Image, Text, Link } from "@chakra-ui/react";
 import { RiFacebookBoxFill, RiLinkedinBoxFill } from "react-icons/ri";
 
 interface ImageProps {
@@ -44,7 +44,7 @@ function SectionTwo({
   imageThree,
   imageThreeMobile,
   textDescription,
-  side
+  side,
 }: ImageProps) {
   return (
     <>
@@ -59,23 +59,36 @@ function SectionTwo({
             <Image
               src={imageOne.url}
               alt={imageOne.alt}
-              display={['none', 'none', 'none', 'none', 'inline-block', 'inline-block']}
+              display={[
+                "none",
+                "none",
+                "none",
+                "none",
+                "inline-block",
+                "inline-block",
+              ]}
             />
             <Image
               src={imageOneMobile.url}
               alt={imageOneMobile.alt}
-              width={['90vw', '90vw', '90vw', '90vw', 'auto', 'auto']}
-              display={['inline-block', 'inline-block', 'inline-block', 'inline-block', 'none', 'none',]}
-              objectFit='cover'
+              width={["90vw", "90vw", "90vw", "90vw", "auto", "auto"]}
+              display={[
+                "inline-block",
+                "inline-block",
+                "inline-block",
+                "inline-block",
+                "none",
+                "none",
+              ]}
+              objectFit="cover"
             />
-
           </Box>
         </Flex>
       </Box>
 
       <Flex
         as="section"
-        flexDir={['column', 'column', 'column', 'column', 'row', 'row']}
+        flexDir={["column", "column", "column", "column", "row", "row"]}
         alignItems="center"
         justifyContent="center"
         backgroundColor="#D9D9D9"
@@ -87,37 +100,63 @@ function SectionTwo({
           <Image
             src={imageTwo.url}
             alt={imageTwo.alt}
-            display={['none', 'none', 'none', 'none', 'inline-block', 'inline-block']}
+            display={[
+              "none",
+              "none",
+              "none",
+              "none",
+              "inline-block",
+              "inline-block",
+            ]}
           />
           <Image
             src={imageTwoMobile.url}
             alt={imageTwoMobile.alt}
-            display={['inline-block', 'inline-block', 'inline-block', 'inline-block', 'none', 'none',]}
-            width={['90vw', '90vw', '90vw', '90vw', 'auto', 'auto']}
-            objectFit='cover'
+            display={[
+              "inline-block",
+              "inline-block",
+              "inline-block",
+              "inline-block",
+              "none",
+              "none",
+            ]}
+            width={["90vw", "90vw", "90vw", "90vw", "auto", "auto"]}
+            objectFit="cover"
           />
         </Box>
-        <Box
-          paddingLeft={[0, 0, 0, 0, 6, 6]}
-        >
+        <Box paddingLeft={[0, 0, 0, 0, 6, 6]}>
           <Image
             src={imageThree.url}
             alt={imageThree.alt}
-            display={['none', 'none', 'none', 'none', 'inline-block', 'inline-block']}
+            display={[
+              "none",
+              "none",
+              "none",
+              "none",
+              "inline-block",
+              "inline-block",
+            ]}
           />
           <Image
             src={imageThreeMobile.url}
             alt={imageThreeMobile.alt}
-            display={['inline-block', 'inline-block', 'inline-block', 'inline-block', 'none', 'none',]}
-            width={['90vw', '90vw', '90vw', '90vw', 'auto', 'auto']}
-            objectFit='cover'
+            display={[
+              "inline-block",
+              "inline-block",
+              "inline-block",
+              "inline-block",
+              "none",
+              "none",
+            ]}
+            width={["90vw", "90vw", "90vw", "90vw", "auto", "auto"]}
+            objectFit="cover"
           />
         </Box>
       </Flex>
 
       <Flex
         as="section"
-        flexDir={['column', 'column', 'column', 'column', 'row', 'row']}
+        flexDir={["column", "column", "column", "column", "row", "row"]}
         alignItems="center"
         justifyContent="center"
         backgroundColor="#D9D9D9"
@@ -125,22 +164,42 @@ function SectionTwo({
         padding="20px 5vw"
       >
         <Box maxW="500px" order={side} padding={5}>
-          <Flex justifyContent="center" alignItems="center">
-            <Text>COMPARTILHAR</Text>
-            <RiFacebookBoxFill size={20} />
-            <RiLinkedinBoxFill size={20} />
+          <Flex alignItems="center">
+            <Text mr={2}>COMPARTILHAR</Text>
+            <Link
+              href="https://www.facebook.com/jpasiniarquiteturaeengenharia/"
+              _hover={{ color: 'green.600', transition: '0.3s'}}
+              target="_blank"
+            >
+              <RiFacebookBoxFill size={30} />
+            </Link>
+
+            <Link
+              href="https://www.linkedin.com/company/jpasini/"
+              _hover={{ color: 'green.600', transition: '0.3s'}}
+              target="_blank"
+            >
+              <RiLinkedinBoxFill size={30} />
+            </Link>
           </Flex>
         </Box>
         <Box
           maxW="500px"
-          marginLeft={[0, 0, 0, 0, '4vw', '4vw']}
+          marginLeft={[0, 0, 0, 0, "4vw", "4vw"]}
           paddingBottom={5}
         >
           <Text
             as="p"
             lineHeight="25px"
-            fontSize={['xs', 'xs', 'sm', 'sm', 'md', 'md']}
-            textAlign={['center', 'center', 'center', 'center', 'start', 'start']}
+            fontSize={["xs", "xs", "sm", "sm", "md", "md"]}
+            textAlign={[
+              "center",
+              "center",
+              "center",
+              "center",
+              "start",
+              "start",
+            ]}
           >
             {textDescription}
           </Text>

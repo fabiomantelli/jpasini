@@ -247,7 +247,7 @@ export const enterprisesData = [
     path: "residencial-viena",
     logoColor: "green",
     textColor: "white",
-    colorMenu: "green",
+    colorMenu: "white",
     images: [
       {
         id: 1,
@@ -471,7 +471,7 @@ export const enterprisesData = [
     mainSubTitle:
       "São 46 apartamentos de 2 quartos, sendo 1 suíte. Sacada com churrasqueira a carvão e bancada de granito. Possui 1 vaga de garagem, salão de festas, 2 elevadores, guarita, segurança e serviço de TV.",
     path: "internacional",
-    logoColor: "white",
+    logoColor: "green",
     textColor: "white",
     colorMenu: "green",
     images: [
